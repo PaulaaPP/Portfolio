@@ -81,13 +81,13 @@ export default {
       border: 2px solid;
       box-shadow: none;
       transition: all 0.3s ease-in-out;
-    }
 
-    .btn-outline-primary:hover {
-      color: $bright_green;
-      box-shadow: $bright_green;
-      animation: glow 1s ease-in-out infinite alternate;
-      transform: scale(1.1);
+      &:hover {
+        color: $bright_green;
+        box-shadow: $bright_green;
+        animation: glow 1s ease-in-out infinite alternate;
+        transform: scale(1.1);
+      }
     }
   }
 
