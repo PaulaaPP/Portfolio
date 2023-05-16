@@ -11,7 +11,7 @@ export default {
 <style lang="scss" scoped>
 .about {
   height: 50vh;
-  background-color: aqua;
+  // background-color: aqua;
   // background: linear-gradient(
   //   148deg,
   //   rgba(21, 105, 115, 1) 0%,

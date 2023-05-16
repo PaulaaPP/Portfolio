@@ -15,8 +15,8 @@ import Footer from "./components/Footer.vue";
   </header>
 
   <main>
-    <About />
-    <Projects />
+    <div class="bg"><About /> <Projects /></div>
+
     <Contact />
   </main>
 
@@ -37,5 +37,19 @@ body {
   box-sizing: border-box;
   background-color: rgb(143, 141, 139);
   font-family: "Pacifico", cursive;
+
+  .bg {
+    background: linear-gradient(
+      148deg,
+      rgba(21, 105, 115, 1) 0%,
+      rgba(27, 49, 62, 1) 20%,
+      rgba(29, 33, 42, 1) 35%,
+      rgba(29, 33, 42, 1) 50%,
+      rgb(35, 27, 41, 1) 60%,
+      rgb(49, 36, 58) 75%,
+      rgb(57, 42, 68) 85%,
+      rgba(89, 61, 111, 1) 100%
+    );
+  }
 }
 </style>

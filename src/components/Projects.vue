@@ -12,6 +12,7 @@ export default {
 @import "@/assets/_shared.scss/";
 div {
   height: 100vh;
-  background-color: rgb(109, 107, 102);
+  color: white;
+  // background-color: rgb(109, 107, 102);
 }
 </style>

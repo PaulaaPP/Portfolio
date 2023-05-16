@@ -9,7 +9,7 @@
       <div class="row py-5">
         <div class="col-sm-4 col-md-4 text-start">
           <span>Nazywam sie</span>
-          <h3>Paula Piskorz</h3>
+          <h3 class="name">Paula Piskorz</h3>
           <p>Jestem frontend developerem</p>
         </div>
 
@@ -37,18 +37,20 @@
           </p>
         </div>
       </div>
-
-      <div class="heading-skilss text-center py-5">
-        <h2>Umiejętności</h2>
-        <div class="underline"></div>
-      </div>
     </article>
+
+    <Skills />
   </section>
 </template>
 
 <script>
+import Skills from "./Skills.vue";
+
 export default {
   name: "About",
+  components: {
+    Skills,
+  },
 };
 </script>
 
@@ -56,18 +58,7 @@ export default {
 @import "@/assets/_shared.scss/";
 
 .about {
-  height: 100vh;
-  background: linear-gradient(
-    148deg,
-    rgba(21, 105, 115, 1) 0%,
-    rgba(27, 49, 62, 1) 20%,
-    rgba(29, 33, 42, 1) 35%,
-    rgba(29, 33, 42, 1) 50%,
-    rgb(35, 27, 41, 1) 60%,
-    rgb(49, 36, 58) 75%,
-    rgb(57, 42, 68) 85%,
-    rgba(89, 61, 111, 1) 100%
-  );
+  // height: 100vh;
 
   //about me classes
   .heading-about {
@@ -104,18 +95,9 @@ export default {
         color: $light_green;
         font-size: 15px;
       }
-      h3 {
+      .name {
         color: $green;
         font-size: 45px;
-      }
-    }
-
-    // Skillls class
-    .heading-skilss {
-      h2 {
-        color: $green;
-        font-size: 40px;
-        margin-top: 30px;
       }
     }
   }
