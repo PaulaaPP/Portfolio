@@ -61,6 +61,7 @@ export default {
         <div ref="nav-link" class="navbar-nav ms-auto">
           <a class="nav-link active" href="/">Home</a>
           <a class="nav-link" href="#about">O mnie </a>
+          <a class="nav-link" href="#skills">Umiejętność </a>
           <a class="nav-link" href="#projects">Projekty</a>
           <a class="nav-link" href="#contact">Kontakt</a>
         </div>

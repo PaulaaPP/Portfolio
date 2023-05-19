@@ -2,7 +2,7 @@
   <section class="header">
     <div class="hero-image">
       <div class="hero-shadow">
-        <div class="hero-text">
+        <div class="hero-text anime">
           <h1>Witaj na mojej stronie!</h1>
           <p>Piękne i funckonajne strony internetowe to moja pasja</p>
           <a href="#about">

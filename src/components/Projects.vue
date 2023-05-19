@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "Navigations",
+  name: "Projects",
 };
 </script>
 
@@ -13,6 +13,5 @@ export default {
 div {
   height: 100vh;
   color: white;
-  // background-color: rgb(109, 107, 102);
 }
 </style>

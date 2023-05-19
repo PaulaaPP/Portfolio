@@ -1,20 +1,20 @@
 <template>
-  <section id="about" class="about py-45">
+  <section id="about" class="py-45">
     <article class="container">
-      <div class="heading-about text-center py-5">
+      <div class="heading-about anime text-center py-5">
         <h2>O mnie</h2>
         <div class="underline"></div>
       </div>
 
       <div class="row py-5">
-        <div class="col-sm-4 col-md-4 text-start">
+        <div class="anime col-sm-4 col-md-4 text-start">
           <span>Nazywam sie</span>
           <h3 class="name">Paula Piskorz</h3>
           <p>Jestem frontend developerem</p>
         </div>
 
         <div class="col-sm-6 col-md-8 text-start">
-          <p>
+          <p class="anime">
             Przez długi czas zastanawiałam się, jakby to było, gdybym sama mogła
             stworzyć swoją własną stronę internetową lub napisywać małe
             programy. Zawsze ciekawiły mnie te tematy, a nowinki technologiczne
@@ -56,17 +56,12 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/_shared.scss/";
-
-.about {
-  // height: 100vh;
-
-  //about me classes
-  .heading-about {
-    h2 {
-      color: $green;
-      font-size: 60px;
-      margin-top: 35px;
-    }
+//about me classes
+.heading-about {
+  h2 {
+    color: $green;
+    font-size: 60px;
+    margin-top: 35px;
   }
   .underline {
     margin: 0 auto;
@@ -84,22 +79,22 @@ export default {
     background-size: 240% 240%;
     animation: gradient-animation 3s ease infinite;
   }
-  .container {
-    .row {
-      p {
-        font-size: 17px;
-        color: white;
-      }
+}
 
-      span {
-        color: $light_green;
-        font-size: 15px;
-      }
-      .name {
-        color: $green;
-        font-size: 45px;
-      }
-    }
+.row {
+  height: 70vh;
+  p {
+    font-size: 17px;
+    color: white;
+  }
+
+  span {
+    color: $light_green;
+    font-size: 15px;
+  }
+  .name {
+    color: $green;
+    font-size: 45px;
   }
 }
 
