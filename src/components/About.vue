@@ -10,7 +10,7 @@
         <div class="anime col-sm-4 col-md-4 text-start">
           <span>Nazywam sie</span>
           <h3 class="name">Paula Piskorz</h3>
-          <p>Jestem frontend developerem</p>
+          <p>Jestem fron-tend developerem</p>
         </div>
 
         <div class="col-sm-6 col-md-8 text-start">
@@ -38,7 +38,7 @@
         </div>
       </div>
     </article>
-
+    <!-- next component -->
     <Skills />
   </section>
 </template>
@@ -56,12 +56,13 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/_shared.scss/";
-//about me classes
+
+//heading
 .heading-about {
   h2 {
     color: $green;
     font-size: 60px;
-    margin-top: 35px;
+    margin-top: 40px;
   }
   .underline {
     margin: 0 auto;
@@ -69,12 +70,12 @@ export default {
     height: 5px;
     background: linear-gradient(
       to right,
-      #1b313e,
-      #07c0b6,
-      #068a89,
-      #b87cb9,
-      #e762dc,
-      #3b316e
+      $dark_green,
+      $bright_green,
+      $green,
+      $violet,
+      $bright_violet,
+      $dark_violet
     );
     background-size: 240% 240%;
     animation: gradient-animation 3s ease infinite;
@@ -82,7 +83,7 @@ export default {
 }
 
 .row {
-  height: 70vh;
+  height: 50vh;
   p {
     font-size: 17px;
     color: white;

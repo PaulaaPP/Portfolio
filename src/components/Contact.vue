@@ -10,6 +10,7 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-  height: 50vh;
+  height: 20vh;
+  background-color: burlywood;
 }
 </style>

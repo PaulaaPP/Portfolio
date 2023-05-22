@@ -3,7 +3,6 @@
 import Navigations from "./components/Navigations.vue";
 import Home from "./components/Home.vue";
 import About from "./components/About.vue";
-// import Skills from "./components/Skills.vue";
 import Projects from "./components/Projects.vue";
 import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
@@ -15,7 +14,6 @@ export default {
     Navigations,
     Home,
     About,
-    // Skills,
     Projects,
     Contact,
     Footer,
@@ -32,7 +30,7 @@ export default {
       }
       // {
       //   // threshold: 0.5,
-      //   rootMargin: "-30px",
+      //   // rootMargin: "-200px",
       // }
     );
 
@@ -57,7 +55,7 @@ export default {
   </header>
 
   <main>
-    <div class="bg">
+    <div class="main-background-color">
       <About />
       <Projects />
     </div>
@@ -84,7 +82,7 @@ body {
   font-family: "Pacifico", cursive;
   scroll-behavior: smooth;
 
-  .bg {
+  .main-background-color {
     background: linear-gradient(
       148deg,
       rgba(21, 105, 115, 1) 0%,
