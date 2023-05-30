@@ -4,36 +4,52 @@ import { onMounted } from "@vue/runtime-core";
 
 export default {
   name: "Navigation",
-
   setup() {
-    const headRef = ref();
+    const isScrolled = ref(false);
+    const navbarCollapseEl = ref(null);
 
     onMounted(() => {
       window.addEventListener("scroll", () => {
-        if (window.scrollY >= 300) {
-          headRef.value.classList.add("shadow-bg");
-        } else {
-          headRef.value.classList.remove("shadow-bg");
+        isScrolled.value = window.scrollY >= 300;
+        if (isScrolled.value && navbarCollapseEl.value) {
+          navbarCollapseEl.value.classList.add("shadow-bg");
+        } else if (navbarCollapseEl.value) {
+          navbarCollapseEl.value.classList.remove("shadow-bg");
         }
       });
 
-      //for hide navbar on click
-      const navLinkEl = document.querySelectorAll(".nav-link");
-      const navbarCollapseEl = document.querySelector(".navbar-collapse");
-      navLinkEl.forEach(item =>
-        item.addEventListener("click", () =>
-          navbarCollapseEl.classList.remove("show")
-        )
-      );
+      // for hide navbar on click
+      const navLinks = document.querySelectorAll(".nav-link");
+      const navbarCollapse = document.querySelector(".navbar-collapse");
+      if (navLinks && navbarCollapse) {
+        navLinks.forEach(item =>
+          item.addEventListener("click", () =>
+            navbarCollapse.classList.remove("show")
+          )
+        );
+      }
     });
-    return { headRef };
+
+    const toogleButton = () => {
+      if (!isScrolled.value) {
+        navbarCollapseEl.value.classList.add("shadow-bg");
+      }
+      navbarCollapseEl.value.classList.remove("show");
+    };
+
+    return {
+      isScrolled,
+      navbarCollapseEl,
+      toogleButton,
+    };
   },
 };
 </script>
 
 <template>
   <nav
-    ref="headRef"
+    ref="navbarCollapseEl"
+    :class="{ 'shadow-bg': isScrolled }"
     id="navbar"
     class="navbar navbar-expand-lg top-0 w-100 fixed-top py-3"
   >
@@ -43,6 +59,7 @@ export default {
         <span>Paula Piskorz</span>
       </a>
       <button
+        @click="toogleButton"
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
@@ -53,13 +70,9 @@ export default {
       >
         <span><i class="fa-solid fa-bars-staggered"></i></span>
       </button>
-      <div
-        ref="navbar-collapse"
-        class="collapse navbar-collapse"
-        id="navbarNavAltMarkup"
-      >
-        <div ref="nav-link" class="navbar-nav ms-auto">
-          <a class="nav-link active" href="/">Home</a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active" href="/home">Home</a>
           <a class="nav-link" href="#about">O mnie </a>
           <a class="nav-link" href="#projects">Projekty</a>
           <a class="nav-link" href="#contact">Kontakt</a>

@@ -1,20 +1,31 @@
+<script>
+import Skills from "./Skills.vue";
+
+export default {
+  name: "About",
+  components: {
+    Skills,
+  },
+};
+</script>
+
 <template>
-  <section id="about" class="py-45">
+  <section id="about" class="py-5 pb-5">
     <article class="container">
-      <div class="heading-about anime text-center py-5">
+      <div class="heading-about animation text-center py-4">
         <h2>O mnie</h2>
         <div class="underline"></div>
       </div>
 
       <div class="row py-5">
-        <div class="anime col-sm-4 col-md-4 text-start">
+        <div class="md-width-title animation col-sm-4 col-md-4 text-start">
           <span>Nazywam sie</span>
           <h3 class="name">Paula Piskorz</h3>
           <p>Jestem fron-tend developerem</p>
         </div>
 
-        <div class="col-sm-6 col-md-8 text-start">
-          <p class="anime">
+        <div class="md-width-paragraf col-sm-6 col-md-8 text-start">
+          <p class="animation">
             Przez długi czas zastanawiałam się, jakby to było, gdybym sama mogła
             stworzyć swoją własną stronę internetową lub napisywać małe
             programy. Zawsze ciekawiły mnie te tematy, a nowinki technologiczne
@@ -43,17 +54,6 @@
   </section>
 </template>
 
-<script>
-import Skills from "./Skills.vue";
-
-export default {
-  name: "About",
-  components: {
-    Skills,
-  },
-};
-</script>
-
 <style lang="scss" scoped>
 @import "@/assets/_shared.scss/";
 
@@ -61,7 +61,7 @@ export default {
 .heading-about {
   h2 {
     color: $green;
-    font-size: 60px;
+    font-size: 40px;
     margin-top: 40px;
   }
   .underline {
@@ -83,7 +83,7 @@ export default {
 }
 
 .row {
-  height: 50vh;
+  height: auto;
   p {
     font-size: 17px;
     color: white;
@@ -96,6 +96,55 @@ export default {
   .name {
     color: $green;
     font-size: 45px;
+  }
+}
+
+/*  media queries */
+
+//large
+@media (max-width: 1024px) {
+  .row {
+    padding: 0 20px;
+    p {
+      font-size: 16px;
+    }
+    .name {
+      font-size: 35px;
+    }
+  }
+}
+
+//medium
+@media (max-width: 767px) {
+  .row {
+    display: grid;
+    grid-template-rows: auto;
+    place-items: center;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+
+    .md-width-title {
+      width: auto;
+    }
+    .md-width-paragraf {
+      width: auto;
+    }
+  }
+}
+
+// small
+@media (max-width: 425px) {
+  .heading-about h2 {
+    font-size: 35px;
+  }
+  .row {
+    p {
+      font-size: 14px;
+      padding-top: 2px;
+    }
+    .name {
+      font-size: 28px;
+    }
   }
 }
 

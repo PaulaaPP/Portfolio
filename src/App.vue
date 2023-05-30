@@ -35,7 +35,7 @@ export default {
     );
 
     onMounted(() => {
-      const cardElements = document.querySelectorAll(".anime");
+      const cardElements = document.querySelectorAll(".animation");
       cardElements.forEach(card => {
         observer.observe(card);
       });
@@ -96,7 +96,9 @@ body {
     );
   }
 }
-.anime {
+
+// class fot animations efect
+.animation {
   opacity: 0;
   transform: translateY(-80px);
   transition: opacity 1s ease-out, transform 1s;

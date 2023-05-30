@@ -2,7 +2,7 @@
   <section class="header">
     <div class="hero-image">
       <div class="hero-shadow">
-        <div class="hero-text anime">
+        <div class="hero-text animation">
           <h1>Witaj na mojej stronie!</h1>
           <p>Piękne i funckonajne strony internetowe to moja pasja</p>
           <a href="#about">
@@ -98,56 +98,42 @@ export default {
     bottom: 40px;
     color: $bright_violet;
     left: 50%;
-    // transform: translateX(-50%);
   }
 }
 
-// media query
+/***  media queris ***/
 
-//small
-@media (min-width: 375px) {
-  header {
+// small
+@media (max-width: 1024px) {
+  .header {
+    .hero-text {
+      h1 {
+        font-size: 35px;
+        padding: 5px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// medium
+@media (max-width: 425px) {
+  .header {
     .hero-text {
       h1 {
         font-size: 30px;
         padding: 5px;
       }
       p {
-        font-size: 15px;
+        font-size: 12px;
       }
     }
   }
 }
 
-//medium
-@media (min-width: 786px) {
-  header {
-    .hero-text {
-      h1 {
-        font-size: 45px;
-      }
-      p {
-        font-size: 15px;
-      }
-    }
-  }
-}
-
-//large
-@media (min-width: 2400px) {
-  header {
-    .hero-text {
-      h1 {
-        font-size: 85px;
-      }
-      p {
-        font-size: 25px;
-      }
-    }
-  }
-}
-
-// animations
+/*** animations ***/
 @keyframes glow {
   from {
     box-shadow: 0 0 10px $green, 0 0 20px $green, 0 0 30px $green;

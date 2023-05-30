@@ -1,26 +1,19 @@
 import { createRouter, createWebHistory } from "vue-router";
 // import HomeView from "../views/HomeView.vue";
-// import ProjectsView from "../views/ProjectsView.vue";
-// import ContactView from "../views/ContactView.vue";
+
+import Home from "../components/Home.vue";
+import About from "../components/About.vue";
+import Projects from "../components/Projects.vue";
+import Contact from "../components/Contact.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    // {
-    //   path: "/",
-    //   name: "home",
-    //   component: HomeView,
-    // },
-    // {
-    //   path: "/projects",
-    //   name: "Projects",
-    //   component: ProjectsView,
-    // },
-    // {
-    //   path: "/contact",
-    //   name: "Contact",
-    //   component: ContactView,
-    // },
+    { path: "/home", component: Home }, // Twoja komponenta strony głównej
+    { path: "/about", component: About }, // Twoja komponenta "O mnie"
+    { path: "/projects", component: Projects }, // Twoja komponenta "Projekty"
+    { path: "/contact", component: Contact }, // Twoja komponenta "Kontakt"
+
     // {
     //   path: "/about",
     //   name: "about",

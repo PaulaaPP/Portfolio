@@ -1,66 +1,80 @@
+<script>
+export default {
+  name: "Skills",
+};
+</script>
+
 <template>
-  <section id="skills" class="py-45">
+  <section id="skills" class="pt-5">
     <article class="container">
-      <div class="heading-skilss anime text-center py-5">
+      <div class="heading-skilss animation text-center py-5">
         <h2>Umiejętności</h2>
         <div class="underline"></div>
       </div>
 
       <div class="row">
-        <div class="skill linear col-sm-5 col-md-6 text-start">
-          <h2>Techniczne</h2>
+        <!-- hard skills -->
+        <div class="skill">
+          <h2>techniczne</h2>
+          <div class="linear g-col-6 text-start">
+            <div class="bars animation">
+              <h3>html</h3>
+              <div class="bar"><span class="html">80%</span></div>
+            </div>
 
-          <div class="bars anime">
-            <h3>html</h3>
-            <div class="bar"><span class="html"></span></div>
-          </div>
+            <div class="bars animation">
+              <h3>css</h3>
+              <div class="bar"><span class="css">65%</span></div>
+            </div>
 
-          <div class="bars anime">
-            <h3>css</h3>
-            <div class="bar"><span class="css"></span></div>
-          </div>
+            <div class="bars animation">
+              <h3>java script</h3>
+              <div class="bar"><span class="js">45%</span></div>
+            </div>
 
-          <div class="bars anime">
-            <h3>java script</h3>
-            <div class="bar"><span class="js"></span></div>
-          </div>
+            <div class="bars animation">
+              <h3>vue</h3>
+              <div class="bar"><span class="vue">40%</span></div>
+            </div>
 
-          <div class="bars anime">
-            <h3>vue</h3>
-            <div class="bar"><span class="vue"></span></div>
-          </div>
+            <div class="bars animation">
+              <h3>wordpress</h3>
+              <div class="bar"><span class="wp">55%</span></div>
+            </div>
 
-          <div class="bars anime">
-            <h3>wordpress</h3>
-            <div class="bar"><span class="wp"></span></div>
+            <div class="bars animation">
+              <h3>MongoDB / Firebase</h3>
+              <div class="bar"><span class="other">30%</span></div>
+            </div>
           </div>
         </div>
 
-        <div class="skill cicrle col-sm-5 col-md-6 grid text-center">
+        <!-- soft skills  -->
+        <div class="skill cicrle g-col-6 grid text-center">
           <h2>Interpersonalne</h2>
           <div class="grid-container">
-            <li class="circles anime">
+            <li class="circles animation">
               <div class="team-work-progress">
                 <span class="progress-value">95%</span>
               </div>
               <span class="text">Praca zespołowa</span>
             </li>
 
-            <li class="circles anime">
+            <li class="circles animation">
               <div class="creativity-progress">
                 <span class="progress-value">85%</span>
               </div>
               <span class="text">Kreatywność</span>
             </li>
 
-            <li class="circles anime">
+            <li class="circles animation">
               <div class="troubleshooting-progress">
                 <span class="progress-value">65%</span>
               </div>
               <span class="text">Rozwiązywanie problemów</span>
             </li>
 
-            <li class="circles anime">
+            <li class="circles animation">
               <div class="communication-progress">
                 <span class="progress-value">80%</span>
               </div>
@@ -72,12 +86,6 @@
     </article>
   </section>
 </template>
-
-<script>
-export default {
-  name: "Skills",
-};
-</script>
 
 <style lang="scss" scoped>
 @import "@/assets/_shared.scss/";
@@ -116,8 +124,9 @@ export default {
 
   h2 {
     font-size: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 42px;
     text-transform: uppercase;
+    text-align: center;
   }
 
   h3 {
@@ -150,28 +159,32 @@ export default {
     height: 20px;
     float: left;
     background: linear-gradient(90deg, $green, $bright_green, $violet 100%);
+    text-align: right;
   }
   .html {
-    width: 90%;
+    width: 80%;
   }
   .css {
-    width: 75%;
+    width: 65%;
   }
   .js {
-    width: 48%;
+    width: 45%;
   }
   .wp {
-    width: 60%;
+    width: 55%;
   }
   .vue {
-    width: 37%;
+    width: 40%;
+  }
+  .other {
+    width: 30%;
   }
 }
 
 /* progres bar- cicrle */
 .cicrle {
   h2 {
-    margin-bottom: 69px;
+    margin-bottom: 71px;
     text-transform: uppercase;
   }
   span {
@@ -270,6 +283,49 @@ export default {
   font-weight: 500;
   color: $light_green;
   padding: 13px;
+}
+
+/*  media queries */
+
+//small screen
+@media (max-width: 1199px) {
+  .linear {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-31%, -50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .linear {
+    position: relative;
+    top: 43%;
+    left: 50%;
+    transform: translate(-31%, -50%);
+    width: 360px;
+  }
+}
+
+@media (max-width: 425px) {
+  .heading-skilss h2 {
+    font-size: 35px;
+  }
+  .circles {
+    align-content: center;
+    margin: auto;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .linear {
+    position: relative;
+    top: 43%;
+    left: 50%;
+    transform: translate(-31%, -50%);
+    width: 320px;
+  }
 }
 
 /* animations underline */
