@@ -115,7 +115,7 @@ export default {
 }
 
 form {
-  background-color: hsla(201, 40%, 17%, 0.308);
+  background-color: hsl(201, 40%, 17%, 0.308);
   width: 600px;
   padding: 50px;
   border-radius: 24px;
@@ -131,7 +131,7 @@ form {
   button {
     padding: 10px;
     font-size: 15px;
-    border: 2px solid hsl(8%, 8%, 67%);
+    border: 2px solid hsl(8%, 8%, 8%, 67%);
     border-radius: 10px;
   }
 
