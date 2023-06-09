@@ -1,35 +1,23 @@
 <script>
-import Popup from "./Popup.vue";
-import Popuppp from "./Popuppp.vue";
-
+import EcotynkProject from "./EcotynkProject.vue";
 import { ref } from "vue";
 
 export default {
   name: "Projects",
   components: {
-    Popup,
-    Popuppp,
+    EcotynkProject,
   },
   setup() {
-    const popupTriggers = ref({
-      buttonTrigger: false,
-    });
     const popupEcotynk = ref({
       ecotynkTrigger: false,
     });
 
-    const TogglePopup = trigger => {
-      popupTriggers.value[trigger] = !popupTriggers.value[trigger];
-    };
     const ToggleEcotnyk = ecotynkTrigger => {
       popupEcotynk.value[ecotynkTrigger] = !popupEcotynk.value[ecotynkTrigger];
     };
 
     return {
-      Popup,
-      Popuppp,
-      popupTriggers,
-      TogglePopup,
+      EcotynkProject,
       ToggleEcotnyk,
       popupEcotynk,
     };
@@ -51,10 +39,11 @@ export default {
         <div class="col box ecoTynk animation">
           <div class="box-efects">
             <div>
-              <button @click="() => TogglePopup('buttonTrigger')">
+              <button @click="() => ToggleEcotnyk('ecotynkTrigger')">
                 Zobacz wiecej
               </button>
-              <p>EcoTynk -wordpress</p>
+              <p>EcoTynk - wordpress</p>
+              <span class="link"> </span>
             </div>
           </div>
         </div>
@@ -74,7 +63,7 @@ export default {
         <div class="col box galery animation">
           <div class="box-efects">
             <div class="shows">
-              <button @click="() => TogglePopup('buttonTrigger')">
+              <button @click="() => ToggleEcotnyk('ecotynkTrigger')">
                 Zobacz wiecej
               </button>
               <p>Moja Galeria</p>
@@ -83,22 +72,18 @@ export default {
         </div>
       </div>
     </div>
-
-    <Popup
-      v-if="popupTriggers.buttonTrigger"
-      :TogglePopup="() => TogglePopup('buttonTrigger')"
-    >
-      <h2>My Button Popup</h2>
-    </Popup>
-
-    <!--  -->
-
-    <Popuppp
+    <!-- Prjects -->
+    <EcotynkProject
       v-if="popupEcotynk.ecotynkTrigger"
       :ToggleEcotnyk="() => ToggleEcotnyk('ecotynkTrigger')"
     >
-      <h2>Java Script</h2>
-    </Popuppp>
+      <h2>
+        EcoTynk - WordPress - Custom Theme
+        <a href="https://github.com/PaulaaPP/EcoTynk" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </h2>
+    </EcotynkProject>
   </section>
 </template>
 
@@ -111,6 +96,7 @@ section {
 }
 h2 {
   color: white;
+  font-size: 18px;
 }
 
 /* heading*/
@@ -189,6 +175,21 @@ h2 {
       color: $bright_green;
       transition: color 0.3s;
     }
+  }
+}
+
+//link github
+a {
+  margin: 0 10px;
+  font-size: 31px;
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  transition: color 0.3s, transform 0.3s;
+
+  &:hover {
+    color: $bright_green;
+    transform: scale(1.2);
   }
 }
 

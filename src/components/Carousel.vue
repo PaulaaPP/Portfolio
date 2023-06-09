@@ -18,6 +18,7 @@ export default {
 <template>
   <div class="carousel">
     <slot></slot>
+
     <button @click.prevent="next" class="btn btn-next next">
       <i class="fa fa-angle-right right"></i>
     </button>
@@ -32,7 +33,7 @@ export default {
 .carousel {
   position: relative;
   width: 800px;
-  height: 500px;
+  height: 430px;
   overflow: hidden;
 }
 
@@ -41,21 +42,22 @@ button {
   height: 40px;
   width: 50px;
   top: calc(50% - 20px);
-  background-color: blueviolet;
-}
+  border-color: $green;
+  color: $green;
 
-button:active,
-button:hover {
-  outline: none;
-  cursor: pointer;
+  &:hover,
+  &:active {
+    color: $bright_green;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
 }
 
 .next {
   right: 0;
-  background-color: blueviolet;
 }
 .prev {
   left: 0;
-  background-color: blueviolet;
 }
 </style>

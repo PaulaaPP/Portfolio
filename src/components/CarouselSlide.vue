@@ -17,8 +17,8 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/_shared.scss/";
 .carousel-slide {
-  background-color: chocolate;
   width: 300px;
   height: 300px;
+  border-radius: 10px;
 }
 </style>

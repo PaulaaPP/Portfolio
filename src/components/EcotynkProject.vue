@@ -1,17 +1,18 @@
 <script>
 import Carousel from "./Carousel.vue";
 import CarouselSlide from "./CarouselSlide.vue";
-
 // foto for carusel slide
-import demo1 from "@/assets/img/demo1.jpg";
+import ecotynk1 from "@/assets/img/ecotynk1.png";
 import ecotynk2 from "@/assets/img/ecotynk2.png";
 import ecotynk3 from "@/assets/img/ecotynk3.png";
+import ecotynk4 from "@/assets/img/ecotynk4.png";
+import ecotynk5 from "@/assets/img/ecotynk5.png";
 
 export default {
   props: ["ToggleEcotnyk"],
   data() {
     return {
-      slides: [demo1, ecotynk2, ecotynk3],
+      slides: [ecotynk5, ecotynk2, ecotynk3, ecotynk4, ecotynk1],
       visibleSlide: 0,
     };
   },
@@ -64,7 +65,9 @@ export default {
         </carousel>
       </div>
       <!--  -->
-      <button class="popup-close" @click="ToggleEcotnyk()">Zamknij</button>
+      <button class="popup-close" @click="ToggleEcotnyk()">
+        Zamknij ecotynk
+      </button>
     </div>
   </div>
 </template>
@@ -86,6 +89,7 @@ export default {
 
   img {
     width: 800px;
+    border-radius: 5px;
   }
 }
 
