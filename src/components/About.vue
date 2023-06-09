@@ -18,28 +18,30 @@ export default {
       </div>
 
       <div class="row py-5">
-        <div class="md-width-title animation col-sm-4 col-md-4 text-start">
+        <div class="title animation col-sm-4 col-md-4 text-start">
           <span>Nazywam sie</span>
           <h3 class="name">Paula Piskorz</h3>
           <p>Jestem fron-tend developerem</p>
         </div>
 
-        <div class="md-width-paragraf col-sm-6 col-md-8 text-start">
+        <div class="paragraf col-sm-6 col-md-8 text-start">
           <p class="animation">
             Przez długi czas zastanawiałam się, jakby to było, gdybym sama mogła
             stworzyć swoją własną stronę internetową lub napisywać małe
             programy. Zawsze ciekawiły mnie te tematy, a nowinki technologiczne
             zwracały moją uwagę. Postanowiłam w końcu podjąć to wyzwanie i
             zaryzykować.
-            <br />
-            <br />
+          </p>
+
+          <p class="animation">
             W ostatnim roku skupiłam swoją uwagę na nauce tworzenia stron
             internetowych i programowania. Po przyswojeniu podstaw HTML i CSS
             odkryłam, że można w nich wykorzystać swoją kreatywność, co tylko
             jeszcze bardziej zachęciło mnie do pogłębiania swojej wiedzy na
             temat programowania.
-            <br />
-            <br />
+          </p>
+
+          <p class="animation">
             Przez półtora roku pracowałam w domowym zaciszu, rozwijając swoje
             umiejętności i zdobywając wiedzę, którą dziś z dumą prezentuję w
             moim portfolio. Teraz z niecierpliwością czekam na kolejny etap
@@ -84,18 +86,22 @@ export default {
 
 .row {
   height: auto;
-  p {
-    font-size: 17px;
-    color: white;
-  }
+  color: white;
 
-  span {
-    color: $light_green;
-    font-size: 15px;
+  .title {
+    color: white;
+    .name {
+      color: $green;
+      font-size: 45px;
+    }
+    span {
+      color: $light_green;
+    }
   }
-  .name {
-    color: $green;
-    font-size: 45px;
+  .paragraf {
+    p {
+      line-height: 28px;
+    }
   }
 }
 
@@ -123,10 +129,10 @@ export default {
     grid-gap: 1rem;
     grid-template-columns: 1fr;
 
-    .md-width-title {
+    .title {
       width: auto;
     }
-    .md-width-paragraf {
+    .paragraf {
       width: auto;
     }
   }

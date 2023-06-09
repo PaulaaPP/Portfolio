@@ -9,6 +9,7 @@ export default {
     <div class="adres-shadow">
       <div class="container">
         <div class="row">
+          
           <!-- Contact form -->
           <div class="col-lg-8 col-lg-4 form-box">
             <h3>Napisz do mnie</h3>
@@ -47,6 +48,7 @@ export default {
               </p>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -131,7 +133,7 @@ form {
   button {
     padding: 10px;
     font-size: 15px;
-    border: 2px solid hsl(8%, 8%, 8%, 67%);
+    border: 2px solid $green;
     border-radius: 10px;
   }
 
@@ -164,23 +166,6 @@ form {
   display: flex;
   flex-direction: column;
   margin: 15px 0;
-}
-
-.msg-status {
-  display: none;
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-}
-
-.success {
-  display: flex;
-  background-color: rgb(99, 141, 36);
-}
-
-.error {
-  display: flex;
-  background-color: red;
 }
 
 /**   media query **/
