@@ -97,6 +97,36 @@ body {
   }
 }
 
+/* class animations underline in headers */
+.underline {
+  margin: 0 auto;
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(
+    to right,
+    $dark_green,
+    $bright_green,
+    $green,
+    $violet,
+    $bright_violet,
+    $dark_violet
+  );
+  background-size: 240% 240%;
+  animation: gradient-animation 3s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 // class fot animations efect
 .animation {
   opacity: 0;

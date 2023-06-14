@@ -98,6 +98,7 @@ export default {
     bottom: 40px;
     color: $bright_violet;
     left: 50%;
+    animation: jump 1s infinite;
   }
 }
 
@@ -140,6 +141,18 @@ export default {
   }
   to {
     box-shadow: 0 0 20px $green, 0 0 30px $green, 0 0 40px $green;
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 </style>

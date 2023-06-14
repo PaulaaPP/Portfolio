@@ -8,6 +8,7 @@ export default {
     const isScrolled = ref(false);
     const navbarCollapseEl = ref(null);
 
+        // add shadow for navigations on scroll
     onMounted(() => {
       window.addEventListener("scroll", () => {
         isScrolled.value = window.scrollY >= 300;
@@ -30,6 +31,7 @@ export default {
       }
     });
 
+    // add shadow for navigations on click
     const toogleButton = () => {
       if (!isScrolled.value) {
         navbarCollapseEl.value.classList.add("shadow-bg");

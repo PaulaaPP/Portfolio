@@ -102,6 +102,7 @@ section {
 
 
 /***  media queris ***/
+
 /* medium */
 @media (max-width: 1416px) {
   section {

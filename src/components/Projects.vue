@@ -33,7 +33,7 @@ export default {
     </div>
 
     <div class="container pt-5">
-      <div class="row gap-5 align-items-center">
+      <div class="row gap-5 align-items-center p-3">
         <!--  -->
 
         <div class="col box ecoTynk animation">
@@ -72,7 +72,7 @@ export default {
         </div>
       </div>
     </div>
-    <!-- Prjects -->
+    <!-- Projects -->
     <EcotynkProject
       v-if="popupEcotynk.ecotynkTrigger"
       :ToggleEcotnyk="() => ToggleEcotnyk('ecotynkTrigger')"
@@ -105,26 +105,11 @@ h2 {
     color: $green;
     font-size: 40px;
   }
-  .underline {
-    margin: 0 auto;
-    width: 100px;
-    height: 5px;
-    background: linear-gradient(
-      to right,
-      $dark_green,
-      $bright_green,
-      $green,
-      $violet,
-      $bright_violet,
-      $dark_violet
-    );
-    background-size: 240% 240%;
-    animation: gradient-animation 3s ease infinite;
-  }
+  // class for underlie in app.vue
 }
 
 .box-efects {
-  margin: 40% 0;
+  margin: 45% 0;
   height: 40%;
   border-radius: 0.5rem;
   display: grid;
@@ -134,6 +119,9 @@ h2 {
 
   div {
     overflow: hidden;
+  }
+  p {
+    padding-left: 12px;
   }
 
   &:hover {
@@ -212,25 +200,131 @@ a {
 }
 
 /* media queries  */
+
+@media (max-width: 1399px) {
+  .box-efects {
+    margin: 54% 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .box-efects {
+    margin: 67% 0;
+  }
+  p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .box-efects {
+    margin: 14% 0;
+    height: 88%;
+  }
+  .box {
+    button {
+      margin: 46px 7px;
+      padding: 24px;
+    }
+  }
+}
+// @media (max-width: 991px) {
+//   section {
+//     height: 90vh;
+//     padding-top: 15%;
+//   }
+//   .box-efects {
+//     margin: 95% 0;
+//   }
+//   .box {
+//     button {
+//       margin: 19px 10px;
+//       padding: 5px;
+//     }
+//   }
+// }
+
+@media (max-width: 768px) {
+  .box-efects {
+    margin: 14% 0;
+    height: 88%;
+  }
+  .box {
+    button {
+      margin: 43px 27px;
+      padding: 9px;
+    }
+  }
+}
+
 //small screen
-@media (max-width: 600px) {
+@media (max-width: 688px) {
+  section {
+    height: 140vh;
+    padding-top: 15%;
+  }
   .row {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: 5px;
+  }
+
+  .box-efects {
+    margin: 14% 0;
+    height: 80%;
+  }
+  .box {
+    button {
+      margin: 52px 11px;
+      padding: 19px;
+    }
   }
 }
 
-/* animations underline */
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
+@media (max-width: 414px) {
+  section {
+    height: 158vh;
   }
-  50% {
-    background-position: 100% 50%;
+
+  .box-efects {
+    margin: 6% 0px;
+    height: 81%;
   }
-  100% {
-    background-position: 0% 50%;
+  .box {
+    height: 202px;
+    button {
+      margin: 39px 13px;
+      padding: 11px;
+    }
+  }
+}
+
+@media (max-width: 393px) {
+  section {
+    height: 170vh;
+  }
+
+  .box {
+    height: 180px;
+    width: 290px;
+    button {
+      margin: 32px 13px;
+      padding: 11px;
+    }
+  }
+}
+@media (max-width: 330px) {
+  section {
+    height: 240vh;
+  }
+
+  .box {
+    height: 180px;
+    width: 250px;
+    button {
+      margin: 25px 10px;
+      padding: 16px;
+    }
   }
 }
 </style>

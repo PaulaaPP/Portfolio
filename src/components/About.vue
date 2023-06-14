@@ -66,22 +66,7 @@ export default {
     font-size: 40px;
     margin-top: 40px;
   }
-  .underline {
-    margin: 0 auto;
-    width: 100px;
-    height: 5px;
-    background: linear-gradient(
-      to right,
-      $dark_green,
-      $bright_green,
-      $green,
-      $violet,
-      $bright_violet,
-      $dark_violet
-    );
-    background-size: 240% 240%;
-    animation: gradient-animation 3s ease infinite;
-  }
+  // class for underlie in app.vue
 }
 
 .row {

@@ -7,8 +7,10 @@ import ecotynk2 from "@/assets/img/ecotynk2.png";
 import ecotynk3 from "@/assets/img/ecotynk3.png";
 import ecotynk4 from "@/assets/img/ecotynk4.png";
 import ecotynk5 from "@/assets/img/ecotynk5.png";
+import buttonMixins from "../components/mixins/sliderbutton";
 
 export default {
+  mixins: [buttonMixins],
   props: ["ToggleEcotnyk"],
   data() {
     return {
@@ -16,28 +18,7 @@ export default {
       visibleSlide: 0,
     };
   },
-  computed: {
-    slidesLen() {
-      return this.slides.length;
-    },
-  },
 
-  methods: {
-    next() {
-      if (this.visibleSlide >= this.slidesLen - 1) {
-        this.visibleSlide = 0;
-      } else {
-        this.visibleSlide++;
-      }
-    },
-    prev() {
-      if (this.visibleSlide <= 0) {
-        this.visibleSlide = this.slidesLen - 1;
-      } else {
-        this.visibleSlide--;
-      }
-    },
-  },
   components: {
     Carousel: Carousel,
     CarouselSlide: CarouselSlide,
