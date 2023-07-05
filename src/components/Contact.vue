@@ -9,22 +9,21 @@ export default {
     <div class="adres-shadow">
       <div class="container">
         <div class="row">
-          
           <!-- Contact form -->
           <div class="col-lg-8 col-lg-4 form-box">
             <h3>Napisz do mnie</h3>
             <form class="animation">
               <div class="contact-card">
                 <label for="name">Imię:</label>
-                <input type="text" id="name" class="name" required />
+                <input type="text" class="name" required />
               </div>
               <div class="contact-card">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required />
+                <input type="email" name="email" required />
               </div>
               <div class="contact-card">
                 <label for="msg">Wiadomość</label>
-                <textarea type="msg" id="msg" required></textarea>
+                <textarea type="msg" required></textarea>
               </div>
               <button class="btn btn-primary">Wyślij</button>
             </form>
@@ -46,9 +45,20 @@ export default {
                 <i class="fa-solid fa-location-dot"></i> Adres <br />
                 <span>Rzeszów 38-200, 3-go Maja 12</span>
               </p>
+              <div class="links">
+                <p>
+                  <a
+                    href="https://github.com/PaulaaPP/Portfolio"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i> Github</a
+                  >
+                </p>
+                <p>
+                  <a href=""></a><i class="fa-brands fa-linkedin"></i>Linkedin
+                </p>
+              </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -100,6 +110,16 @@ export default {
   }
   span {
     font-size: 15px;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  .links {
+    margin-top: 65px;
+    p {
+      padding: 5px;
+    }
   }
 }
 
@@ -176,6 +196,9 @@ form {
     width: 440px;
     padding: 35px;
   }
+  .adres-image {
+    height: 77vh;
+  }
 }
 
 @media (max-width: 991px) {
@@ -196,7 +219,7 @@ form {
 // medium
 @media (max-width: 775px) {
   .adres-image {
-    height: 125vh;
+    height: 150vh;
   }
 }
 
@@ -210,7 +233,7 @@ form {
 // small
 @media (max-width: 414px) {
   .adres-image {
-    height: 150vh;
+    height: 195vh;
   }
   form {
     width: 350px;
@@ -230,7 +253,7 @@ form {
 
 @media (max-width: 325px) {
   .adres-image {
-    height: 200vh;
+    height: 240vh;
   }
   form {
     width: 280px;

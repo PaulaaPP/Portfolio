@@ -2,34 +2,21 @@
 import Carousel from "./Carousel.vue";
 import CarouselSlide from "./CarouselSlide.vue";
 // foto for carusel slide
-import ecotynk0 from "@/assets/img/ecotynk0.png";
-import ecotynk1 from "@/assets/img/ecotynk1.png";
-import ecotynk2 from "@/assets/img/ecotynk2.png";
-import ecotynk3 from "@/assets/img/ecotynk3.png";
-import ecotynk4 from "@/assets/img/ecotynk4.png";
-import ecotynk5 from "@/assets/img/ecotynk5.png";
-import ecotynk6 from "@/assets/img/ecotynk6.png";
-import ecotynk7 from "@/assets/img/ecotynk7.png";
-import ecotynk8 from "@/assets/img/ecotynk8.png";
+import form from "@/assets/img/form.png";
+import form2 from "@/assets/img/form2.png";
+import form3 from "@/assets/img/form3.png";
+import form4 from "@/assets/img/form4.png";
+import form5 from "@/assets/img/form5.png";
+import form6 from "@/assets/img/form6.png";
 
 import buttonMixins from "../components/mixins/sliderbutton";
 
 export default {
   mixins: [buttonMixins],
-  props: ["ToggleEcotnyk"],
+  props: ["ToggleForm"],
   data() {
     return {
-      slides: [
-        ecotynk0,
-        ecotynk1,
-        ecotynk2,
-        ecotynk3,
-        ecotynk4,
-        ecotynk8,
-        ecotynk5,
-        ecotynk6,
-        ecotynk7,
-      ],
+      slides: [form, form2, form3, form4, form5, form6],
       visibleSlide: 0,
     };
   },
@@ -45,6 +32,7 @@ export default {
   <div class="popup">
     <div class="popup-inner blur-effect">
       <slot />
+
       <!--  -->
       <div>
         <carousel @next="next" @prev="prev">
@@ -60,9 +48,9 @@ export default {
         </carousel>
       </div>
       <!--  -->
-      <button class="popup-close" @click="ToggleEcotnyk()">Zamknij</button>
+      <button class="popup-close" @click="ToggleForm()">Zamknij</button>
       <button>
-        <a href="https://github.com/PaulaaPP/EcoTynk" target="_blank">
+        <a href="https://github.com/PaulaaPP/registration-form" target="_blank">
           <i class="fab fa-github"></i>
         </a>
       </button>

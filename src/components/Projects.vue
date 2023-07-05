@@ -1,25 +1,48 @@
 <script>
 import EcotynkProject from "./EcotynkProject.vue";
+import FormProject from "./FormProject.vue";
+import GaleryProject from "./GaleryProject.vue";
 import { ref } from "vue";
 
 export default {
   name: "Projects",
   components: {
     EcotynkProject,
+    FormProject,
+    GaleryProject,
   },
   setup() {
     const popupEcotynk = ref({
       ecotynkTrigger: false,
     });
 
+    const popupForm = ref({
+      formTrigger: false,
+    });
+
+    const popupGalery = ref({
+      galeryTrigger: false,
+    });
+    // ecotynk
     const ToggleEcotnyk = ecotynkTrigger => {
       popupEcotynk.value[ecotynkTrigger] = !popupEcotynk.value[ecotynkTrigger];
+    };
+    // form
+    const ToggleForm = formTrigger => {
+      popupForm.value[formTrigger] = !popupForm.value[formTrigger];
+    };
+    const ToggleGalery = galeryTrigger => {
+      popupGalery.value[galeryTrigger] = !popupGalery.value[galeryTrigger];
     };
 
     return {
       EcotynkProject,
       ToggleEcotnyk,
       popupEcotynk,
+      popupForm,
+      ToggleForm,
+      ToggleGalery,
+      popupGalery,
     };
   },
 };
@@ -27,63 +50,69 @@ export default {
 
 <template>
   <section id="projects" class="portfolio section">
-    <div class="heading-skilss animation text-center py-5">
+    <div class="heading-skilss animation text-center py-3">
       <h2>Portfolio</h2>
       <div class="underline"></div>
     </div>
 
     <div class="container pt-5">
       <div class="row gap-5 align-items-center p-3">
-        <!--  -->
-
+        <!-- box for projects-->
         <div class="col box ecoTynk animation">
-          <div class="box-efects">
-            <div>
-              <button @click="() => ToggleEcotnyk('ecotynkTrigger')">
-                Zobacz wiecej
-              </button>
+          <div
+            @click="() => ToggleEcotnyk('ecotynkTrigger')"
+            class="box-efects"
+          >
+            <div class="shows">
               <p>EcoTynk - wordpress</p>
-              <span class="link"> </span>
+              <button>Zobacz wiecej</button>
             </div>
           </div>
         </div>
-
-        <!--  -->
+        <!-- box for projects-->
         <div class="col box js animation">
-          <div class="box-efects">
+          <div @click="() => ToggleForm('formTrigger')" class="box-efects">
             <div class="shows">
-              <button @click="() => ToggleEcotnyk('ecotynkTrigger')">
-                Zobacz wiecej
-              </button>
-              <p>Java Script</p>
+              <p>Formularz rejestacji - Java Script</p>
+              <button>Zobacz wiecej</button>
             </div>
           </div>
         </div>
-        <!--  -->
+        <!-- box for projects-->
         <div class="col box galery animation">
-          <div class="box-efects">
+          <div @click="() => ToggleGalery('galeryTrigger')" class="box-efects">
             <div class="shows">
-              <button @click="() => ToggleEcotnyk('ecotynkTrigger')">
-                Zobacz wiecej
-              </button>
-              <p>Moja Galeria</p>
+              <p>Moja Galeria - wordpress</p>
+              <button>Zobacz wiecej</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Projects -->
+
+    <!-- Popup whith carousel Projects  -->
     <EcotynkProject
       v-if="popupEcotynk.ecotynkTrigger"
       :ToggleEcotnyk="() => ToggleEcotnyk('ecotynkTrigger')"
     >
-      <h2>
-        EcoTynk - WordPress - Custom Theme
-        <a href="https://github.com/PaulaaPP/EcoTynk" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      </h2>
+      <h2>EcoTynk - WordPress - Custom Theme</h2>
     </EcotynkProject>
+
+    <!-- Popup whith carousel Projects  -->
+    <FormProject
+      v-if="popupForm.formTrigger"
+      :ToggleForm="() => ToggleForm('formTrigger')"
+    >
+      <h2>Formularz rejestacji - Java Script</h2>
+    </FormProject>
+
+    <!-- Popup whith carousel Projects  -->
+    <GaleryProject
+      v-if="popupGalery.galeryTrigger"
+      :ToggleGalery="() => ToggleGalery('galeryTrigger')"
+    >
+      <h2>Galeria Obrazów - Custom WordPress Theme (FSE) - wordpress</h2>
+    </GaleryProject>
   </section>
 </template>
 
@@ -92,30 +121,40 @@ export default {
 
 section {
   height: 100vh;
-  padding-top: 7%;
+  padding-top: 12%;
 }
 h2 {
   color: white;
   font-size: 18px;
 }
 
-/* heading*/
+.lol {
+  background-color: red;
+}
+
+/***   heading ****/
 .heading-skilss {
   h2 {
     color: $green;
     font-size: 40px;
   }
-  // class for underlie in app.vue
+  // class for underlie is in app.vue
 }
 
 .box-efects {
-  margin: 45% 0;
-  height: 40%;
+  margin: 4% 0;
+  height: 91%;
   border-radius: 0.5rem;
   display: grid;
   grid-template-rows: 0fr;
   transition: all 0.5s;
   overflow: hidden;
+
+  .shows {
+    margin-top: 60px;
+    text-align: center;
+    place-items: center;
+  }
 
   div {
     overflow: hidden;
@@ -126,7 +165,7 @@ h2 {
 
   &:hover {
     grid-template-rows: 1fr;
-    background: rgba(59, 49, 110, 0.404);
+    background: rgba(59, 49, 110, 0.604);
     transition: grid-template-rows 1s;
   }
 }
@@ -135,6 +174,7 @@ h2 {
   z-index: 1;
   height: 300px;
   width: 300px;
+  font-size: 20px;
   background-color: rgb(175, 145, 107);
   border-radius: 10px;
   transition: transform 1s;
@@ -166,21 +206,6 @@ h2 {
   }
 }
 
-//link github
-a {
-  margin: 0 10px;
-  font-size: 31px;
-  cursor: pointer;
-  color: white;
-  background-color: transparent;
-  transition: color 0.3s, transform 0.3s;
-
-  &:hover {
-    color: $bright_green;
-    transform: scale(1.2);
-  }
-}
-
 .ecoTynk {
   background-image: url("../assets/img/ecotynk0.png");
   background-position: center;
@@ -188,79 +213,79 @@ a {
 }
 
 .js {
-  background-image: url("../assets/img/demo1.jpg");
+  background-image: url("../assets/img/form.png");
   background-position: center;
   background-size: cover;
 }
 
 .galery {
-  background-image: url("../assets/img/form-image.jpg");
+  background-image: url("../assets/img/galery1.png");
   background-position: center;
   background-size: cover;
 }
 
-/* media queries  */
+/**  media queries  ***/
 
 @media (max-width: 1399px) {
   .box-efects {
-    margin: 54% 0;
+    margin: 5% 0;
   }
 }
 
 @media (max-width: 1199px) {
-  .box-efects {
-    margin: 67% 0;
-  }
   p {
-    font-size: 15px;
+    font-size: 19px;
   }
 }
-@media (max-width: 991px) {
+
+@media (max-width: 1024px) {
+  section {
+    padding-top: 33%;
+  }
+}
+@media (max-width: 998px) {
   .box-efects {
-    margin: 14% 0;
-    height: 88%;
+    margin: 9% 0;
+    height: 90%;
   }
   .box {
     button {
-      margin: 46px 7px;
-      padding: 24px;
+      margin: 25px 7px;
+      padding: 13px;
+      font-size: 19px;
     }
   }
 }
-// @media (max-width: 991px) {
-//   section {
-//     height: 90vh;
-//     padding-top: 15%;
-//   }
-//   .box-efects {
-//     margin: 95% 0;
-//   }
-//   .box {
-//     button {
-//       margin: 19px 10px;
-//       padding: 5px;
-//     }
-//   }
-// }
+
+//medium screen
+@media (max-width: 885px) {
+  section {
+    padding-top: 27%;
+  }
+}
 
 @media (max-width: 768px) {
+  h2 {
+    font-size: 14px;
+  }
+  // a {
+  //   font-size: 21px;
+  // }
   .box-efects {
-    margin: 14% 0;
-    height: 88%;
+    margin: 5% 0;
+    height: 91%;
   }
   .box {
     button {
-      margin: 43px 27px;
-      padding: 9px;
+      margin: 10px 30px;
     }
   }
 }
 
-//small screen
 @media (max-width: 688px) {
   section {
-    height: 140vh;
-    padding-top: 15%;
+    padding-bottom: 41%;
+    height: 91%;
   }
   .row {
     display: grid;
@@ -270,8 +295,8 @@ a {
   }
 
   .box-efects {
-    margin: 14% 0;
-    height: 80%;
+    margin: 4% 0;
+    height: 90%;
   }
   .box {
     button {
@@ -281,49 +306,63 @@ a {
   }
 }
 
+//small screen
 @media (max-width: 414px) {
   section {
     height: 158vh;
   }
+  // a {
+  //   margin: 0 6px;
+  //   font-size: 17px;
+  // }
 
   .box-efects {
-    margin: 6% 0px;
-    height: 81%;
+    .shows {
+      margin-top: 47px;
+      p {
+        font-size: 15px;
+      }
+    }
   }
   .box {
     height: 202px;
     button {
-      margin: 39px 13px;
+      margin: 8px 13px;
       padding: 11px;
+      font-size: 15px;
     }
   }
 }
 
 @media (max-width: 393px) {
   section {
-    height: 170vh;
+    height: 150vh;
   }
 
   .box {
     height: 180px;
     width: 290px;
     button {
-      margin: 32px 13px;
-      padding: 11px;
+      margin: 0 13px;
     }
   }
 }
 @media (max-width: 330px) {
   section {
-    height: 240vh;
+    height: 210vh;
+    // padding-bottom: 20%;
+  }
+  .box-efects {
+    .shows {
+      margin-top: 40px;
+    }
   }
 
   .box {
     height: 180px;
     width: 250px;
     button {
-      margin: 25px 10px;
-      padding: 16px;
+      margin: 0 13px;
     }
   }
 }

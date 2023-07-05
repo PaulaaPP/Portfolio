@@ -21,4 +21,5 @@ export default {
   height: 300px;
   border-radius: 10px;
 }
+
 </style>

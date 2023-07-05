@@ -15,7 +15,11 @@
     </div>
 
     <div class="links">
-      <li><a href=""></a><i class="fa-brands fa-github"></i></li>
+      <li>
+        <a href="https://github.com/PaulaaPP/Portfolio" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </li>
       <li><a href=""></a><i class="fa-brands fa-linkedin"></i></li>
     </div>
   </section>
@@ -97,9 +101,14 @@ section {
   column-gap: 30px;
   list-style: none;
   font-size: 20px;
-  cursor: pointer;
-}
 
+  cursor: pointer;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
 
 /***  media queris ***/
 

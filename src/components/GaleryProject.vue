@@ -2,34 +2,22 @@
 import Carousel from "./Carousel.vue";
 import CarouselSlide from "./CarouselSlide.vue";
 // foto for carusel slide
-import ecotynk0 from "@/assets/img/ecotynk0.png";
-import ecotynk1 from "@/assets/img/ecotynk1.png";
-import ecotynk2 from "@/assets/img/ecotynk2.png";
-import ecotynk3 from "@/assets/img/ecotynk3.png";
-import ecotynk4 from "@/assets/img/ecotynk4.png";
-import ecotynk5 from "@/assets/img/ecotynk5.png";
-import ecotynk6 from "@/assets/img/ecotynk6.png";
-import ecotynk7 from "@/assets/img/ecotynk7.png";
-import ecotynk8 from "@/assets/img/ecotynk8.png";
+import galery1 from "@/assets/img/galery1.png";
+import galery2 from "@/assets/img/galery2.png";
+import galery3 from "@/assets/img/galery3.png";
+import galery5 from "@/assets/img/galery5.png";
+import galery6 from "@/assets/img/galery6.png";
+import galery7 from "@/assets/img/galery7.png";
+import galery8 from "@/assets/img/galery8.png";
 
 import buttonMixins from "../components/mixins/sliderbutton";
 
 export default {
   mixins: [buttonMixins],
-  props: ["ToggleEcotnyk"],
+  props: ["ToggleGalery"],
   data() {
     return {
-      slides: [
-        ecotynk0,
-        ecotynk1,
-        ecotynk2,
-        ecotynk3,
-        ecotynk4,
-        ecotynk8,
-        ecotynk5,
-        ecotynk6,
-        ecotynk7,
-      ],
+      slides: [galery1, galery2, galery3, galery5, galery6, galery7, galery8],
       visibleSlide: 0,
     };
   },
@@ -45,6 +33,7 @@ export default {
   <div class="popup">
     <div class="popup-inner blur-effect">
       <slot />
+
       <!--  -->
       <div>
         <carousel @next="next" @prev="prev">
@@ -60,9 +49,9 @@ export default {
         </carousel>
       </div>
       <!--  -->
-      <button class="popup-close" @click="ToggleEcotnyk()">Zamknij</button>
+      <button class="popup-close" @click="ToggleGalery()">Zamknij</button>
       <button>
-        <a href="https://github.com/PaulaaPP/EcoTynk" target="_blank">
+        <a href="https://github.com/PaulaaPP/MyGalery" target="_blank">
           <i class="fab fa-github"></i>
         </a>
       </button>

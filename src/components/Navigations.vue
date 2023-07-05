@@ -8,7 +8,7 @@ export default {
     const isScrolled = ref(false);
     const navbarCollapseEl = ref(null);
 
-        // add shadow for navigations on scroll
+    // add shadow for navigations on scroll
     onMounted(() => {
       window.addEventListener("scroll", () => {
         isScrolled.value = window.scrollY >= 300;
@@ -56,7 +56,7 @@ export default {
     class="navbar navbar-expand-lg top-0 w-100 fixed-top py-3"
   >
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="#home">
         <i class="fa-solid fa-code"></i>
         <span>Paula Piskorz</span>
       </a>
@@ -74,7 +74,7 @@ export default {
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
-          <a class="nav-link active" href="/home">Home</a>
+          <a class="nav-link active" href="#home">Home</a>
           <a class="nav-link" href="#about">O mnie </a>
           <a class="nav-link" href="#projects">Projekty</a>
           <a class="nav-link" href="#contact">Kontakt</a>
@@ -155,6 +155,7 @@ nav {
   }
 }
 
+// media queries
 @media (min-width: 2400px) {
   nav {
     a.navbar-brand {
