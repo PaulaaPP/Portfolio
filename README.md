@@ -1,4 +1,5 @@
 # my_portfolio
+The website is my personal portfolio of website designs in different languages; javascript and wordpress. The portfolio is entirely designed and made by me, including graphics and photos used in the project using app.leonardo.ai.
 
 This template should help get you started developing with Vue 3 in Vite.
 
