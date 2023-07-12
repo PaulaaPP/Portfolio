@@ -72,4 +72,5 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/_styleSingleProjects";
+// all styles in _styleSingleProjects.scss file
 </style>

@@ -35,15 +35,15 @@ export default {
             <div>
               <p>
                 <i class="fa-solid fa-phone"></i>Telefon <br />
-                <span>+48 555 222 333</span>
+                <span>+48 534242940</span>
               </p>
               <p>
                 <i class="fa-solid fa-envelope"></i> Email <br />
-                <span>paula@gamil.com</span>
+                <span>piskorzpaula@gmail.com </span>
               </p>
               <p>
                 <i class="fa-solid fa-location-dot"></i> Adres <br />
-                <span>Rzeszów 38-200, 3-go Maja 12</span>
+                <span>Polska Podkarpackie, 38-120 Czudec</span>
               </p>
               <div class="links">
                 <p>
@@ -54,7 +54,11 @@ export default {
                   >
                 </p>
                 <p>
-                  <a href=""></a><i class="fa-brands fa-linkedin"></i>Linkedin
+                  <a
+                    href="https://www.linkedin.com/in/paula-piskorz-a02139283"
+                    target="_blank"
+                    ><i class="fa-brands fa-linkedin"></i>Linkedin</a
+                  >
                 </p>
               </div>
             </div>

@@ -20,7 +20,13 @@
           ><i class="fa-brands fa-github"></i
         ></a>
       </li>
-      <li><a href=""></a><i class="fa-brands fa-linkedin"></i></li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/paula-piskorz-a02139283"
+          target="_blank"
+        ></a
+        ><i class="fa-brands fa-linkedin"></i>
+      </li>
     </div>
   </section>
 </template>
