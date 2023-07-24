@@ -19,17 +19,17 @@ export default {
           <div class="linear g-col-6 text-start">
             <div class="bars animation">
               <h3>html</h3>
-              <div class="bar"><span class="html">80%</span></div>
+              <div class="bar"><span class="html">79%</span></div>
             </div>
 
             <div class="bars animation">
               <h3>css</h3>
-              <div class="bar"><span class="css">65%</span></div>
+              <div class="bar"><span class="css">70%</span></div>
             </div>
 
             <div class="bars animation">
               <h3>java script</h3>
-              <div class="bar"><span class="js">45%</span></div>
+              <div class="bar"><span class="js">48%</span></div>
             </div>
 
             <div class="bars animation">
@@ -147,13 +147,13 @@ export default {
     text-align: right;
   }
   .html {
-    width: 80%;
+    width: 78%;
   }
   .css {
-    width: 65%;
+    width: 70%;
   }
   .js {
-    width: 45%;
+    width: 48%;
   }
   .wp {
     width: 55%;

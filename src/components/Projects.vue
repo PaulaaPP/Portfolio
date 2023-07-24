@@ -64,7 +64,7 @@ export default {
             class="box-efects"
           >
             <div class="shows">
-              <p>EcoTynk - wordpress</p>
+              <p>EcoTynk - Bootstrap</p>
               <button>Zobacz wiecej</button>
             </div>
           </div>
@@ -95,7 +95,7 @@ export default {
       v-if="popupEcotynk.ecotynkTrigger"
       :ToggleEcotnyk="() => ToggleEcotnyk('ecotynkTrigger')"
     >
-      <h2>EcoTynk - WordPress - Custom Theme</h2>
+      <h2>EcoTynk - Bootstrap</h2>
     </EcotynkProject>
 
     <!-- Popup whith carousel Projects  -->
@@ -207,7 +207,7 @@ h2 {
 }
 
 .ecoTynk {
-  background-image: url("../assets/img/ecotynk0.png");
+  background-image: url("../assets/img/ecotynk1.png");
   background-position: center;
   background-size: cover;
 }

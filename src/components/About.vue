@@ -26,27 +26,33 @@ export default {
 
         <div class="paragraf col-sm-6 col-md-8 text-start">
           <p class="animation">
-            Przez długi czas zastanawiałam się, jakby to było, gdybym sama mogła
-            stworzyć swoją własną stronę internetową lub napisywać małe
-            programy. Zawsze ciekawiły mnie te tematy, a nowinki technologiczne
-            zwracały moją uwagę. Postanowiłam w końcu podjąć to wyzwanie i
-            zaryzykować.
+            Dzięki obecnym możliwościom dostępu do wiedzy i technologii,
+            postanowiłam wreszcie zaspokoić swoją ciekawość dotyczącą kodowania
+            i tworzenia stron internetowych. Podjęłam wyzwanie i postanowiłam
+            skorzystać z okazji, aby zdobyć kolejne nowe umiejętności.
           </p>
 
           <p class="animation">
-            W ostatnim roku skupiłam swoją uwagę na nauce tworzenia stron
-            internetowych i programowania. Po przyswojeniu podstaw HTML i CSS
-            odkryłam, że można w nich wykorzystać swoją kreatywność, co tylko
-            jeszcze bardziej zachęciło mnie do pogłębiania swojej wiedzy na
-            temat programowania.
+            W ciągu ostatniego roku skoncentrowałam się na nauce tworzenia stron
+            internetowych, rozpoczynając od absolutnych podstaw, takich jak HTML
+            i CSS, a następnie posuwając się ku bardziej zaawansowanym
+            zagadnieniom kodowania, takim jak JavaScript, Node.js i podstawy
+            bazy danych Mongo DB. Rozwijałam także umiejętności korzystania z
+            popularnych frameworków, takich jak Bootstrap, Tailwind i Vue.js. Na
+            początku mojej nauki czerpałam wiedzę z darmowych i popularnych
+            źródeł, takich jak YouTube, MDN i Stack Overflow. Jednak gdy
+            opanowałam podstawy, zdecydowałam się inwestować w płatne kursy,
+            które umożliwiły mi dogłębniejsze poznanie i rozwinięcie
+            umiejętności.
           </p>
 
           <p class="animation">
-            Przez półtora roku pracowałam w domowym zaciszu, rozwijając swoje
-            umiejętności i zdobywając wiedzę, którą dziś z dumą prezentuję w
-            moim portfolio. Teraz z niecierpliwością czekam na kolejny etap
-            mojej kariery jako junior frontend developer, aby móc rozwijać swoje
-            umiejętności w praktyce i zdobyć nowe doświadczenia.
+            Przez półtora roku rozwijania się jako programistka zdobyłam nie
+            tylko wiedzę teoretyczną, ale także zdobyłam praktyczne
+            doświadczenie w tworzeniu stron internetowych, którą dziś z dumą
+            prezentuję w moim portfolio. Teraz z niecierpliwością czekam na
+            kolejny etap mojej kariery jako junior frontend developer, aby móc
+            rozwijać swoje umiejętności w praktyce i zdobyć nowe doświadczenia.
           </p>
         </div>
       </div>

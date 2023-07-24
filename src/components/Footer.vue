@@ -24,8 +24,8 @@
         <a
           href="https://www.linkedin.com/in/paula-piskorz-a02139283"
           target="_blank"
-        ></a
-        ><i class="fa-brands fa-linkedin"></i>
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
       </li>
     </div>
   </section>

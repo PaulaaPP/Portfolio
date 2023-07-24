@@ -2,7 +2,7 @@
 import Carousel from "./Carousel.vue";
 import CarouselSlide from "./CarouselSlide.vue";
 // foto for carusel slide
-import ecotynk0 from "@/assets/img/ecotynk0.png";
+
 import ecotynk1 from "@/assets/img/ecotynk1.png";
 import ecotynk2 from "@/assets/img/ecotynk2.png";
 import ecotynk3 from "@/assets/img/ecotynk3.png";
@@ -20,15 +20,14 @@ export default {
   data() {
     return {
       slides: [
-        ecotynk0,
         ecotynk1,
         ecotynk2,
         ecotynk3,
         ecotynk4,
-        ecotynk8,
         ecotynk5,
         ecotynk6,
         ecotynk7,
+        ecotynk8,
       ],
       visibleSlide: 0,
     };
