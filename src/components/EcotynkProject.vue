@@ -61,7 +61,10 @@ export default {
       <!--  -->
       <button class="popup-close" @click="ToggleEcotnyk()">Zamknij</button>
       <button>
-        <a href="https://github.com/PaulaaPP/EcoTynk" target="_blank">
+        <a
+          href="https://github.com/PaulaaPP/EkotynkBoostrapVersion"
+          target="_blank"
+        >
           <i class="fab fa-github"></i>
         </a>
       </button>
