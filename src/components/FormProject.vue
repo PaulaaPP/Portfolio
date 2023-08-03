@@ -48,7 +48,7 @@ export default {
         </carousel>
       </div>
       <!--  -->
-      <button class="popup-close" @click="ToggleForm()">Zamknij</button>
+      <button class="popup-close" @click="ToggleForm()">Close</button>
       <button>
         <a href="https://github.com/PaulaaPP/registration-form" target="_blank">
           <i class="fab fa-github"></i>

@@ -8,14 +8,14 @@ export default {
   <section id="skills" class="pt-5">
     <article class="container">
       <div class="heading-skilss animation text-center py-5">
-        <h2>Umiejętności</h2>
+        <h2>Skills</h2>
         <div class="underline"></div>
       </div>
 
       <div class="row">
         <!-- hard skills -->
         <div class="skill">
-          <h2>techniczne</h2>
+          <h2>technical</h2>
           <div class="linear g-col-6 text-start">
             <div class="bars animation">
               <h3>html</h3>
@@ -51,34 +51,34 @@ export default {
 
         <!-- soft skills  -->
         <div class="skill cicrle g-col-6 grid text-center">
-          <h2>Interpersonalne</h2>
+          <h2>interpersonal</h2>
           <div class="grid-container">
             <li class="circles animation">
               <div class="team-work-progress">
                 <span class="progress-value">95%</span>
               </div>
-              <span class="text">Praca zespołowa</span>
+              <span class="text">teamwork</span>
             </li>
 
             <li class="circles animation">
               <div class="creativity-progress">
                 <span class="progress-value">85%</span>
               </div>
-              <span class="text">Kreatywność</span>
+              <span class="text">Creativity</span>
             </li>
 
             <li class="circles animation">
               <div class="troubleshooting-progress">
                 <span class="progress-value">65%</span>
               </div>
-              <span class="text">Rozwiązywanie problemów</span>
+              <span class="text">problem-solving</span>
             </li>
 
             <li class="circles animation">
               <div class="communication-progress">
                 <span class="progress-value">80%</span>
               </div>
-              <span class="text">Komunikacja</span>
+              <span class="text">Communication</span>
             </li>
           </div>
         </div>

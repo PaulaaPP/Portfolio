@@ -11,39 +11,39 @@ export default {
         <div class="row">
           <!-- Contact form -->
           <div class="col-lg-8 col-lg-4 form-box">
-            <h3>Napisz do mnie</h3>
+            <h3>Text me</h3>
             <form class="animation">
               <div class="contact-card">
-                <label for="name">Imię:</label>
+                <label for="name">Name:</label>
                 <input type="text" class="name" required />
               </div>
               <div class="contact-card">
-                <label for="email">Email:</label>
+                <label for="email">E-mail:</label>
                 <input type="email" name="email" required />
               </div>
               <div class="contact-card">
-                <label for="msg">Wiadomość</label>
+                <label for="msg">Message</label>
                 <textarea type="msg" required></textarea>
               </div>
-              <button class="btn btn-primary">Wyślij</button>
+              <button class="btn btn-primary">Send</button>
             </form>
           </div>
 
           <!-- Adress-->
           <div class="col-lg-4 col-lg-4 adress-box animation">
-            <h3>Adres</h3>
+            <h3>Address</h3>
             <div>
               <p>
-                <i class="fa-solid fa-phone"></i>Telefon <br />
+                <i class="fa-solid fa-phone"></i>Telephone<br />
                 <span>+48 534242940</span>
               </p>
               <p>
-                <i class="fa-solid fa-envelope"></i> Email <br />
+                <i class="fa-solid fa-envelope"></i> E-mail <br />
                 <span>piskorzpaula@gmail.com </span>
               </p>
               <p>
-                <i class="fa-solid fa-location-dot"></i> Adres <br />
-                <span>Polska Podkarpackie, 38-120 Czudec</span>
+                <i class="fa-solid fa-location-dot"></i> Address <br />
+                <span>Poland, Nowa Wieś</span>
               </p>
               <div class="links">
                 <p>

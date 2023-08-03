@@ -3,11 +3,11 @@
     <div class="hero-image">
       <div class="hero-shadow">
         <div class="hero-text animation">
-          <h1>Witaj na mojej stronie!</h1>
-          <p>Piękne i funckonajne strony internetowe to moja pasja</p>
+          <h1>Welcome to my website!</h1>
+          <p>Beautiful and functional websites are my passion</p>
           <a href="#about">
             <button type="button" class="btn btn-outline-primary">
-              Kim jestem ?
+              Who am I ?
             </button>
           </a>
         </div>

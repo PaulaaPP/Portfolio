@@ -59,7 +59,7 @@ export default {
         </carousel>
       </div>
       <!--  -->
-      <button class="popup-close" @click="ToggleEcotnyk()">Zamknij</button>
+      <button class="popup-close" @click="ToggleEcotnyk()">Close</button>
       <button>
         <a
           href="https://github.com/PaulaaPP/EkotynkBoostrapVersion"

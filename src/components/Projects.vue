@@ -65,7 +65,7 @@ export default {
           >
             <div class="shows">
               <p>EcoTynk - Bootstrap</p>
-              <button>Zobacz wiecej</button>
+              <button>Discover more</button>
             </div>
           </div>
         </div>
@@ -73,8 +73,8 @@ export default {
         <div class="col box js animation">
           <div @click="() => ToggleForm('formTrigger')" class="box-efects">
             <div class="shows">
-              <p>Formularz rejestacji - Java Script</p>
-              <button>Zobacz wiecej</button>
+              <p>Registration form - Java Script</p>
+              <button>Discover more</button>
             </div>
           </div>
         </div>
@@ -82,8 +82,8 @@ export default {
         <div class="col box galery animation">
           <div @click="() => ToggleGalery('galeryTrigger')" class="box-efects">
             <div class="shows">
-              <p>Moja Galeria - wordpress</p>
-              <button>Zobacz wiecej</button>
+              <p>My Gallery - wordpress</p>
+              <button>Discover more</button>
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@ export default {
       v-if="popupForm.formTrigger"
       :ToggleForm="() => ToggleForm('formTrigger')"
     >
-      <h2>Formularz rejestacji - Java Script</h2>
+      <h2>Registration form - Java Script</h2>
     </FormProject>
 
     <!-- Popup whith carousel Projects  -->
@@ -111,7 +111,7 @@ export default {
       v-if="popupGalery.galeryTrigger"
       :ToggleGalery="() => ToggleGalery('galeryTrigger')"
     >
-      <h2>Galeria Obrazów - Custom WordPress Theme (FSE) - wordpress</h2>
+      <h2>My Gallery - Custom WordPress Theme(FSE) - wordpress</h2>
     </GaleryProject>
   </section>
 </template>

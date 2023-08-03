@@ -75,9 +75,9 @@ export default {
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
           <a class="nav-link active" href="#home">Home</a>
-          <a class="nav-link" href="#about">O mnie </a>
-          <a class="nav-link" href="#projects">Projekty</a>
-          <a class="nav-link" href="#contact">Kontakt</a>
+          <a class="nav-link" href="#about">About me </a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </div>
       </div>
     </div>
@@ -102,6 +102,7 @@ nav {
 
   button {
     font-size: 29px;
+    margin: 0 3px;
     color: $bright_green;
     span {
       color: $bright_green;

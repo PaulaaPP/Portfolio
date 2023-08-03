@@ -9,9 +9,9 @@
     </div>
 
     <div class="navbar-nav">
-      <a class="nav-link" href="#about">O mnie </a>
-      <a class="nav-link" href="#projects">Projekty</a>
-      <a class="nav-link" href="#contact">Kontakt</a>
+      <a class="nav-link" href="#about">About me</a>
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#contact">Contact</a>
     </div>
 
     <div class="links">
