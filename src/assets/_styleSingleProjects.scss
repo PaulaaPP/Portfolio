@@ -16,14 +16,16 @@
   justify-content: center;
 
   img {
-    width: 74vw;
+    width: 80vw;
     border-radius: 5px;
   }
 }
 
 .popup-inner {
   background: rgba(59, 49, 110, 0.205);
-  padding: 100vh;
+  // padding: 100vh;
+  height: 100%;
+  width: 100%;
 
   button {
     margin: 10px 10px;
@@ -43,10 +45,32 @@
       color: $bright_green;
       transform: scale(1.1);
     }
+
+    @media (max-width: 425px) {
+      padding: 5px;
+    }
   }
 }
 .blur-effect {
   backdrop-filter: blur(5px);
+  padding-top: 10%;
+
+  @media (max-width: 1024px) {
+    padding-top: 30%;
+  }
+  @media (max-width: 830px) {
+    padding-top: 20%;
+  }
+  @media (max-width: 425px) {
+    padding-top: 50%;
+  }
+
+  @media (max-width: 375px) {
+    padding-top: 40%;
+  }
+  @media (max-width: 320px) {
+    padding-top: 30%;
+  }
 }
 //link github
 a {
@@ -63,30 +87,136 @@ a {
   }
 }
 
-/* // *** Media queries *** //  */
+$button-size: 3rem;
+$panel-padding: 1rem;
+$panel-gap: 1rem;
 
-@media (max-width: 2560px) {
-  .popup {
-    img {
-      width: 70vw;
+img {
+  max-width: 100%;
+  display: block;
+}
+
+span {
+  color: white;
+  font-size: 20px;
+  margin: 0 20rem 0;
+}
+
+h4 {
+  margin: 7px 12px;
+  font-size: 20px;
+
+  @media (max-width: 320px) {
+    font-size: 15px;
+  }
+}
+.wrapper {
+  color: rgb(252, 248, 248);
+  max-width: 80rem;
+  height: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  // background-color: rgb(32, 31, 31);
+
+  .accordion {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
     }
+  }
+
+  .accordion * {
+    margin: 0;
+  }
+
+  //   this cointail all staff
+  .accordion-panel {
+    position: relative;
+    isolation: isolate;
+    flex-basis: $panel-padding;
+    overflow: hidden;
+    padding: $panel-padding;
+    border-radius: calc(#{$panel-padding * 2} + #{$button-size} / 2);
+
+    z-index: 1;
+    transition: flex-basis 500ms;
+
+    &:has([aria-expanded="false"]) {
+      .accordion-image {
+        filter: brightness(0.5);
+      }
+    }
+  }
+
+  .accordion-image {
+    position: absolute;
+    inset: 0;
+    width: 120%;
+    height: 100%;
+    object-fit: cover;
+
+    z-index: -1;
+  }
+
+  .accordion-trigger {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: row-reverse;
+    background: transparent;
+    border: 0;
+    padding: 0;
+  }
+
+  .accordion-icon {
+    background: hsla(146, 46%, 21%, 0.55);
+    width: $button-size;
+    aspect-ratio: 1 / 1;
+    padding: 10px;
+    border-radius: 50%;
   }
 }
 
-@media (max-width: 1440px) {
-  .popup {
-    img {
-      width: 74vw;
+.accordion-panel {
+  min-height: 37rem;
+  // width ang height
+  &:has([aria-expanded="true"]) {
+    flex-basis: clamp(66rem, 15rem, 20rem);
+  }
+
+  @media (max-width: 1024px) {
+    min-height: 34rem;
+  }
+  @media (max-width: 834px) {
+    min-height: 26rem;
+  }
+
+  @media (max-width: 768px) {
+    min-height: 0;
+
+    &:has([aria-expanded="true"]) {
+      flex-basis: clamp(25rem, 13rem, 20rem);
     }
   }
-}
-@media (max-width: 425px) {
-  .popup-inner {
-    button {
-      font-size: 15px;
+
+  @media (max-width: 445px) {
+    &:has([aria-expanded="true"]) {
+      flex-basis: clamp(12rem, 12rem, 20rem);
     }
   }
-  a {
-    font-size: 16px;
+
+  @media (max-width: 360px) {
+    &:has([aria-expanded="true"]) {
+      flex-basis: clamp(10rem, 12rem, 20rem);
+    }
+  }
+
+  @media (max-width: 320px) {
+    &:has([aria-expanded="true"]) {
+      flex-basis: clamp(9rem, 10rem, 20rem);
+    }
   }
 }

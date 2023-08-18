@@ -64,7 +64,7 @@ export default {
             class="box-efects"
           >
             <div class="shows">
-              <p>EcoTynk - Bootstrap</p>
+              <p>EcoTynk</p>
               <button>Discover more</button>
             </div>
           </div>
@@ -73,16 +73,17 @@ export default {
         <div class="col box js animation">
           <div @click="() => ToggleForm('formTrigger')" class="box-efects">
             <div class="shows">
-              <p>Registration form - Java Script</p>
+              <p>Registration form</p>
               <button>Discover more</button>
             </div>
           </div>
         </div>
         <!-- box for projects-->
+
         <div class="col box galery animation">
           <div @click="() => ToggleGalery('galeryTrigger')" class="box-efects">
             <div class="shows">
-              <p>My Gallery - wordpress</p>
+              <p>My Gallery</p>
               <button>Discover more</button>
             </div>
           </div>
@@ -95,7 +96,7 @@ export default {
       v-if="popupEcotynk.ecotynkTrigger"
       :ToggleEcotnyk="() => ToggleEcotnyk('ecotynkTrigger')"
     >
-      <h2>EcoTynk - Bootstrap</h2>
+      <!-- <h2>EcoTynk - Bootstrap</h2> -->
     </EcotynkProject>
 
     <!-- Popup whith carousel Projects  -->
@@ -103,7 +104,7 @@ export default {
       v-if="popupForm.formTrigger"
       :ToggleForm="() => ToggleForm('formTrigger')"
     >
-      <h2>Registration form - Java Script</h2>
+      <!-- <h2>Registration form - Java Script</h2> -->
     </FormProject>
 
     <!-- Popup whith carousel Projects  -->
@@ -114,6 +115,9 @@ export default {
       <h2>My Gallery - Custom WordPress Theme(FSE) - wordpress</h2>
     </GaleryProject>
   </section>
+
+  <!--  -->
+  <!--  -->
 </template>
 
 <style lang="scss" scoped>

@@ -16,7 +16,7 @@
 
     <div class="links">
       <li>
-        <a href="https://github.com/PaulaaPP/Portfolio" target="_blank"
+        <a href="https://github.com/PaulaaPP" target="_blank"
           ><i class="fa-brands fa-github"></i
         ></a>
       </li>

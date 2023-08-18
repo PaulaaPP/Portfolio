@@ -1,59 +1,125 @@
 <script>
-import Carousel from "./Carousel.vue";
-import CarouselSlide from "./CarouselSlide.vue";
-// foto for carusel slide
-import form from "@/assets/img/form.png";
-import form2 from "@/assets/img/form2.png";
-import form3 from "@/assets/img/form3.png";
-import form4 from "@/assets/img/form4.png";
-import form5 from "@/assets/img/form5.png";
-import form6 from "@/assets/img/form6.png";
-
-import buttonMixins from "../components/mixins/sliderbutton";
+import buttonMixins from "../components/mixins/accordionClick";
 
 export default {
   mixins: [buttonMixins],
   props: ["ToggleForm"],
-  data() {
-    return {
-      slides: [form, form2, form3, form4, form5, form6],
-      visibleSlide: 0,
-    };
-  },
-
-  components: {
-    Carousel: Carousel,
-    CarouselSlide: CarouselSlide,
-  },
 };
 </script>
 
 <template>
   <div class="popup">
     <div class="popup-inner blur-effect">
-      <slot />
+      <div class="wrapper">
+        <h4>Registration form - Java Script</h4>
+        <div class="accordion">
+          <!-- 1 -->
+          <div class="accordion-panel" @click="handleAccordionClick">
+            <h2 id="panel1-heading">
+              <button
+                class="accordion-trigger"
+                aria-controls="panel1-content"
+                aria-expanded="true"
+              ></button>
+            </h2>
 
-      <!--  -->
-      <div>
-        <carousel @next="next" @prev="prev">
-          <CarouselSlide
-            v-for="(slide, index) in slides"
-            :key="slide"
-            :index="index"
-            :visibleSlide="visibleSlide"
-            class="carousel-slider"
+            <div
+              class="accordion-content"
+              id="panel1-content"
+              aria-labelledby="panel1-heading"
+              aria-hidden="false"
+              role="region"
+            >
+              <img
+                class="accordion-image"
+                src="../assets/img/form.png"
+                alt="Registration form"
+              />
+            </div>
+          </div>
+          <!--  2-->
+          <div class="accordion-panel" @click="handleAccordionClick">
+            <h2 id="panel2-title">
+              <button
+                class="accordion-trigger"
+                aria-expanded="false"
+                aria-controls="panel2-content"
+              ></button>
+            </h2>
+
+            <div
+              role="region"
+              aria-labelledby="panel2-title"
+              aria-hidden="true"
+              class="accordion-content"
+              id="panel2-content"
+            >
+              <img
+                class="accordion-image"
+                src="../assets/img/form2.png"
+                alt="Registration form"
+              />
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="accordion-panel" @click="handleAccordionClick">
+            <h2 id="panel3-title">
+              <button
+                class="accordion-trigger"
+                aria-expanded="false"
+                aria-controls="panel3-content"
+              ></button>
+            </h2>
+
+            <div
+              role="region"
+              aria-labelledby="panel4-title"
+              aria-hidden="true"
+              class="accordion-content"
+              id="panel3-content"
+            >
+              <img
+                class="accordion-image"
+                src="../assets/img/form3.png"
+                alt="Registration form"
+              />
+            </div>
+          </div>
+          <!-- 4  -->
+          <div class="accordion-panel" @click="handleAccordionClick">
+            <h2 id="panel3-title">
+              <button
+                class="accordion-trigger"
+                aria-expanded="false"
+                aria-controls="panel5-content"
+              ></button>
+            </h2>
+
+            <div
+              role="region"
+              aria-labelledby="panel3-title"
+              aria-hidden="true"
+              class="accordion-content"
+              id="panel3-content"
+            >
+              <img
+                class="accordion-image"
+                src="../assets/img/form4.png"
+                alt="Registration form"
+              />
+            </div>
+          </div>
+        </div>
+        <button class="popup-close" @click="ToggleForm()">Close</button>
+        <button>
+          <a
+            href="https://github.com/PaulaaPP/registration-form"
+            target="_blank"
           >
-            <img :src="slide" :alt="slide" />
-          </CarouselSlide>
-        </carousel>
+            <i class="fab fa-github"></i>
+          </a>
+        </button>
       </div>
-      <!--  -->
-      <button class="popup-close" @click="ToggleForm()">Close</button>
-      <button>
-        <a href="https://github.com/PaulaaPP/registration-form" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      </button>
     </div>
   </div>
 </template>

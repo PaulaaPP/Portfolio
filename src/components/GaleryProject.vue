@@ -1,62 +1,125 @@
 <script>
-import Carousel from "./Carousel.vue";
-import CarouselSlide from "./CarouselSlide.vue";
-// foto for carusel slide
-import galery1 from "@/assets/img/galery1.png";
-import galery2 from "@/assets/img/galery2.png";
-import galery3 from "@/assets/img/galery3.png";
-import galery5 from "@/assets/img/galery5.png";
-import galery6 from "@/assets/img/galery6.png";
-import galery7 from "@/assets/img/galery7.png";
-import galery8 from "@/assets/img/galery8.png";
-
-import buttonMixins from "../components/mixins/sliderbutton";
+import buttonMixins from "../components/mixins/accordionClick";
 
 export default {
   mixins: [buttonMixins],
   props: ["ToggleGalery"],
-  data() {
-    return {
-      slides: [galery1, galery2, galery3, galery5, galery6, galery7, galery8],
-      visibleSlide: 0,
-    };
-  },
-
-  components: {
-    Carousel: Carousel,
-    CarouselSlide: CarouselSlide,
-  },
 };
 </script>
 
 <template>
   <div class="popup">
     <div class="popup-inner blur-effect">
-      <slot />
+      <div class="wrapper">
+        <h4>My Gallery - Custom WordPress Theme(FSE)</h4>
+        <div class="accordion">
+          <!-- 1 -->
+          <div class="accordion-panel" @click="handleAccordionClick">
+            <h2 id="panel1-heading">
+              <button
+                class="accordion-trigger"
+                aria-controls="panel1-content"
+                aria-expanded="true"
+              ></button>
+            </h2>
 
-      <!--  -->
-      <div>
-        <carousel @next="next" @prev="prev">
-          <CarouselSlide
-            v-for="(slide, index) in slides"
-            :key="slide"
-            :index="index"
-            :visibleSlide="visibleSlide"
-            class="carousel-slider"
-          >
-            <img :src="slide" :alt="slide" />
-          </CarouselSlide>
-        </carousel>
+            <div
+              class="accordion-content"
+              id="panel1-content"
+              aria-labelledby="panel1-heading"
+              aria-hidden="false"
+              role="region"
+            >
+              <img
+                class="accordion-image"
+                src="../assets/img/galery1.png"
+                alt="foto gallery website"
+              />
+            </div>
+          </div>
+          <!--  2-->
+          <div class="accordion-panel" @click="handleAccordionClick">
+            <h2 id="panel2-title">
+              <button
+                class="accordion-trigger"
+                aria-expanded="false"
+                aria-controls="panel2-content"
+              ></button>
+            </h2>
+
+            <div
+              role="region"
+              aria-labelledby="panel2-title"
+              aria-hidden="true"
+              class="accordion-content"
+              id="panel2-content"
+            >
+              <img
+                class="accordion-image"
+                src="../assets/img/galery2.png"
+                alt="foto gallery website"
+              />
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="accordion-panel" @click="handleAccordionClick">
+            <h2 id="panel3-title">
+              <button
+                class="accordion-trigger"
+                aria-expanded="false"
+                aria-controls="panel3-content"
+              ></button>
+            </h2>
+
+            <div
+              role="region"
+              aria-labelledby="panel3-title"
+              aria-hidden="true"
+              class="accordion-content"
+              id="panel3-content"
+            >
+              <img
+                class="accordion-image"
+                src="../assets/img/galery3.png"
+                alt="foto gallery website"
+              />
+            </div>
+          </div>
+          <!-- 4  -->
+          <div class="accordion-panel" @click="handleAccordionClick">
+            <h2 id="panel3-title">
+              <button
+                class="accordion-trigger"
+                aria-expanded="false"
+                aria-controls="panel3-content"
+              ></button>
+            </h2>
+
+            <div
+              role="region"
+              aria-labelledby="panel3-title"
+              aria-hidden="true"
+              class="accordion-content"
+              id="panel3-content"
+            >
+              <img
+                class="accordion-image"
+                src="../assets/img/galery5.png"
+                alt="foto gallery website"
+              />
+            </div>
+          </div>
+        </div>
+        <button class="popup-close" @click="ToggleGalery()">Close</button>
+        <button>
+          <a href="https://github.com/PaulaaPP/MyGalery" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </button>
       </div>
-      <!--  -->
-      <button class="popup-close" @click="ToggleGalery()">Zamknij</button>
-      <button>
-        <a href="https://github.com/PaulaaPP/MyGalery" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-      </button>
     </div>
   </div>
+  <!--  -->
 </template>
 
 <style lang="scss" scoped>
