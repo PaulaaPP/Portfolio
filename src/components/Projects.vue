@@ -2,6 +2,7 @@
 import EcotynkProject from "./EcotynkProject.vue";
 import FormProject from "./FormProject.vue";
 import GaleryProject from "./GaleryProject.vue";
+import BlogProject from "./BlogProject.vue";
 import { ref } from "vue";
 
 export default {
@@ -10,6 +11,7 @@ export default {
     EcotynkProject,
     FormProject,
     GaleryProject,
+    BlogProject,
   },
   setup() {
     const popupEcotynk = ref({
@@ -23,6 +25,9 @@ export default {
     const popupGalery = ref({
       galeryTrigger: false,
     });
+    const popupBlog = ref({
+      blogTrigger: false,
+    });
     // ecotynk
     const ToggleEcotnyk = ecotynkTrigger => {
       popupEcotynk.value[ecotynkTrigger] = !popupEcotynk.value[ecotynkTrigger];
@@ -31,8 +36,13 @@ export default {
     const ToggleForm = formTrigger => {
       popupForm.value[formTrigger] = !popupForm.value[formTrigger];
     };
+    // gallery
     const ToggleGalery = galeryTrigger => {
       popupGalery.value[galeryTrigger] = !popupGalery.value[galeryTrigger];
+    };
+    // blog
+    const ToggleBlog = blogTrigger => {
+      popupBlog.value[blogTrigger] = !popupBlog.value[blogTrigger];
     };
 
     return {
@@ -43,6 +53,8 @@ export default {
       ToggleForm,
       ToggleGalery,
       popupGalery,
+      ToggleBlog,
+      popupBlog,
     };
   },
 };
@@ -56,9 +68,9 @@ export default {
     </div>
 
     <div class="container pt-5">
-      <div class="row gap-5 align-items-center p-3">
+      <div class="row gap-5 justify-content-center p-3">
         <!-- box for projects-->
-        <div class="col box ecoTynk animation">
+        <div class="col-6 box ecoTynk animation">
           <div
             @click="() => ToggleEcotnyk('ecotynkTrigger')"
             class="box-efects"
@@ -70,7 +82,7 @@ export default {
           </div>
         </div>
         <!-- box for projects-->
-        <div class="col box js animation">
+        <div class="col-6 box js animation">
           <div @click="() => ToggleForm('formTrigger')" class="box-efects">
             <div class="shows">
               <p>Registration form</p>
@@ -79,11 +91,23 @@ export default {
           </div>
         </div>
         <!-- box for projects-->
+      </div>
 
-        <div class="col box galery animation">
+      <div class="row gap-5 p-3 justify-content-center">
+        <div class="col-6 box galery animation">
           <div @click="() => ToggleGalery('galeryTrigger')" class="box-efects">
             <div class="shows">
               <p>My Gallery</p>
+              <button>Discover more</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- box for projects-->
+        <div class="col-6 box blog animation">
+          <div @click="() => ToggleBlog('blogTrigger')" class="box-efects">
+            <div class="shows">
+              <p>My Blog</p>
               <button>Discover more</button>
             </div>
           </div>
@@ -96,7 +120,6 @@ export default {
       v-if="popupEcotynk.ecotynkTrigger"
       :ToggleEcotnyk="() => ToggleEcotnyk('ecotynkTrigger')"
     >
-      <!-- <h2>EcoTynk - Bootstrap</h2> -->
     </EcotynkProject>
 
     <!-- Popup whith carousel Projects  -->
@@ -104,7 +127,6 @@ export default {
       v-if="popupForm.formTrigger"
       :ToggleForm="() => ToggleForm('formTrigger')"
     >
-      <!-- <h2>Registration form - Java Script</h2> -->
     </FormProject>
 
     <!-- Popup whith carousel Projects  -->
@@ -112,8 +134,13 @@ export default {
       v-if="popupGalery.galeryTrigger"
       :ToggleGalery="() => ToggleGalery('galeryTrigger')"
     >
-      <h2>My Gallery - Custom WordPress Theme(FSE) - wordpress</h2>
     </GaleryProject>
+    <!-- Popup whith carousel Projects  -->
+    <BlogProject
+      v-if="popupBlog.blogTrigger"
+      :ToggleBlog="() => ToggleBlog('blogTrigger')"
+    >
+    </BlogProject>
   </section>
 
   <!--  -->
@@ -124,16 +151,12 @@ export default {
 @import "@/assets/_shared.scss/";
 
 section {
-  height: 100vh;
-  padding-top: 12%;
+  height: 120vh;
+  padding-top: 7%;
 }
 h2 {
   color: white;
   font-size: 18px;
-}
-
-.lol {
-  background-color: red;
 }
 
 /***   heading ****/
@@ -227,6 +250,11 @@ h2 {
   background-position: center;
   background-size: cover;
 }
+.blog {
+  background-image: url("../assets/img/blog1.png");
+  background-position: center;
+  background-size: cover;
+}
 
 /**  media queries  ***/
 
@@ -244,7 +272,8 @@ h2 {
 
 @media (max-width: 1024px) {
   section {
-    padding-top: 33%;
+    height: 100vh;
+    padding-top: 25%;
   }
 }
 @media (max-width: 998px) {
@@ -264,6 +293,7 @@ h2 {
 //medium screen
 @media (max-width: 885px) {
   section {
+    height: 110vh;
     padding-top: 27%;
   }
 }
@@ -272,9 +302,7 @@ h2 {
   h2 {
     font-size: 14px;
   }
-  // a {
-  //   font-size: 21px;
-  // }
+
   .box-efects {
     margin: 5% 0;
     height: 91%;
@@ -315,10 +343,6 @@ h2 {
   section {
     height: 158vh;
   }
-  // a {
-  //   margin: 0 6px;
-  //   font-size: 17px;
-  // }
 
   .box-efects {
     .shows {
@@ -340,7 +364,7 @@ h2 {
 
 @media (max-width: 393px) {
   section {
-    height: 150vh;
+    height: 170vh;
   }
 
   .box {
@@ -353,7 +377,7 @@ h2 {
 }
 @media (max-width: 330px) {
   section {
-    height: 210vh;
+    height: 230vh;
     // padding-bottom: 20%;
   }
   .box-efects {

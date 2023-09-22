@@ -7,32 +7,12 @@ export default {
 <template>
   <section id="contact" class="adres-image">
     <div class="adres-shadow">
-      <div class="container">
-        <div class="row">
-          <!-- Contact form -->
-          <div class="col-lg-8 col-lg-4 form-box">
-            <h3>Text me</h3>
-            <form class="animation">
-              <div class="contact-card">
-                <label for="name">Name:</label>
-                <input type="text" class="name" required />
-              </div>
-              <div class="contact-card">
-                <label for="email">E-mail:</label>
-                <input type="email" name="email" required />
-              </div>
-              <div class="contact-card">
-                <label for="msg">Message</label>
-                <textarea type="msg" required></textarea>
-              </div>
-              <button class="btn btn-primary">Send</button>
-            </form>
-          </div>
-
-          <!-- Adress-->
-          <div class="col-lg-4 col-lg-4 adress-box animation">
-            <h3>Address</h3>
-            <div>
+      <div class="container justify-content-center text-center">
+        <!-- Adress-->
+        <div class="adress-box animation">
+          <h3>Address</h3>
+          <div class="box">
+            <div class="px-5">
               <p>
                 <i class="fa-solid fa-phone"></i>Telephone<br />
                 <span>+48 534242940</span>
@@ -45,22 +25,23 @@ export default {
                 <i class="fa-solid fa-location-dot"></i> Address <br />
                 <span>Poland, Nowa Wieś</span>
               </p>
-              <div class="links">
-                <p>
-                  <a
-                    href="https://github.com/PaulaaPP/Portfolio"
-                    target="_blank"
-                    ><i class="fa-brands fa-github"></i> Github</a
-                  >
-                </p>
-                <p>
-                  <a
-                    href="https://www.linkedin.com/in/paula-piskorz-a02139283"
-                    target="_blank"
-                    ><i class="fa-brands fa-linkedin"></i>Linkedin</a
-                  >
-                </p>
-              </div>
+            </div>
+
+            <!--  -->
+
+            <div class="links">
+              <p>
+                <a href="https://github.com/PaulaaPP/Portfolio" target="_blank"
+                  ><i class="fa-brands fa-github"></i> Github</a
+                >
+              </p>
+              <p>
+                <a
+                  href="https://www.linkedin.com/in/paula-piskorz-a02139283"
+                  target="_blank"
+                  ><i class="fa-brands fa-linkedin"></i>Linkedin</a
+                >
+              </p>
             </div>
           </div>
         </div>
@@ -75,10 +56,13 @@ export default {
 .row {
   margin: 10% 0;
 }
+h3 {
+  align-self: center;
+}
 
 .adres-image {
   position: relative;
-  height: 100vh;
+  height: 72vh;
   background-image: url("../assets/img/form-image.jpg");
   background-position: center;
   background-size: cover;
@@ -95,9 +79,17 @@ export default {
 }
 
 // adres area
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: center;
+  justify-content: space-around;
+}
 .adress-box {
   color: white;
-  margin: 46px 0;
+  margin: 100px 0;
+
   h3 {
     font-size: 35px;
     margin-bottom: 35px;
@@ -196,73 +188,46 @@ form {
 
 // large
 @media (max-width: 1024px) {
-  form {
-    width: 440px;
-    padding: 35px;
-  }
   .adres-image {
-    height: 77vh;
+    height: 50vh;
   }
 }
 
 @media (max-width: 991px) {
   .adres-image {
-    height: 145vh;
-  }
-  form {
-    display: grid;
-    justify-content: center;
-  }
-  .adress-box {
-    display: grid;
-    justify-content: center;
-    margin-bottom: 5px;
+    height: 60vh;
   }
 }
 
 // medium
-@media (max-width: 775px) {
-  .adres-image {
-    height: 150vh;
+@media (max-width: 768px) {
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-}
-
-@media (max-width: 570px) {
-  form {
-    width: 400px;
-    padding: 20px;
+  .adres-image {
+    height: 80vh;
   }
 }
 
 // small
 @media (max-width: 414px) {
   .adres-image {
-    height: 195vh;
-  }
-  form {
-    width: 350px;
-    padding: 20px;
+    height: 90vh;
   }
 }
 
 @media (max-width: 375px) {
   .adres-image {
-    height: 180vh;
-  }
-  form {
-    width: 300px;
-    padding: 15px;
+    height: 110vh;
   }
 }
 
 @media (max-width: 325px) {
   .adres-image {
-    height: 240vh;
-  }
-  form {
-    width: 280px;
-    padding: 10px;
-    margin: -5px;
+    height: 130vh;
   }
 }
 

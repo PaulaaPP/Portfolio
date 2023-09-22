@@ -77,6 +77,12 @@ export default {
           <a class="nav-link active" href="#home">Home</a>
           <a class="nav-link" href="#about">About me </a>
           <a class="nav-link" href="#projects">Projects</a>
+          <a
+            class="nav-link blog"
+            href="https://healdles-cms-wordpress-nuxt3-blog.vercel.app/"
+            target="_blank"
+            >Blog</a
+          >
           <a class="nav-link" href="#contact">Contact</a>
         </div>
       </div>
@@ -151,6 +157,14 @@ nav {
       }
       a.nav-link.active:hover {
         color: $violet;
+      }
+      a.nav-link.blog {
+        color: $bright_green;
+        font-weight: 500;
+
+        &:hover {
+          color: rgb(10, 214, 204);
+        }
       }
     }
   }
