@@ -3,6 +3,7 @@
 import Navigations from "./components/Navigations.vue";
 import Home from "./components/Home.vue";
 import About from "./components/About.vue";
+// import Test from "./components/Test.vue";
 import Projects from "./components/Projects.vue";
 
 import Contact from "./components/Contact.vue";
@@ -15,6 +16,8 @@ export default {
     Navigations,
     Home,
     About,
+    // Test,
+
     Projects,
 
     Contact,
@@ -59,6 +62,7 @@ export default {
   <main>
     <div class="main-background-color">
       <About />
+      <Test />
       <Projects />
     </div>
 

@@ -25,23 +25,86 @@ export default {
                 <i class="fa-solid fa-location-dot"></i> Address <br />
                 <span>Poland, Nowa Wieś</span>
               </p>
+
+              <!-- links -->
+              <div class="links">
+                <p>
+                  <a
+                    href="https://github.com/PaulaaPP/Portfolio"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i> Github</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="https://www.linkedin.com/in/paula-piskorz-a02139283"
+                    target="_blank"
+                    ><i class="fa-brands fa-linkedin"></i>Linkedin</a
+                  >
+                </p>
+              </div>
             </div>
 
             <!--  -->
 
-            <div class="links">
-              <p>
-                <a href="https://github.com/PaulaaPP/Portfolio" target="_blank"
-                  ><i class="fa-brands fa-github"></i> Github</a
-                >
-              </p>
-              <p>
-                <a
-                  href="https://www.linkedin.com/in/paula-piskorz-a02139283"
-                  target="_blank"
-                  ><i class="fa-brands fa-linkedin"></i>Linkedin</a
-                >
-              </p>
+            <!-- <h1>Contact Me</h1> -->
+
+            <div class="box-form">
+              <h1>Contact Me</h1>
+
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                class="form"
+              >
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="1c0e1fec-a681-4f0f-bacd-19670c2e37ee"
+                />
+
+                <div class="wrapper">
+                  <input
+                    type="text"
+                    name="Name"
+                    id="text"
+                    class="input"
+                    required
+                    placeholder="Your name"
+                  />
+                  <label for="text"></label>
+                </div>
+
+                <div class="wrapper">
+                  <input
+                    type="email"
+                    name="Email"
+                    id="email"
+                    class="input"
+                    required
+                    placeholder="Your email"
+                  />
+                  <label for="email"></label>
+                </div>
+
+                <div class="wrapper">
+                  <textarea
+                    placeholder="Message"
+                    name="Message"
+                    id="message"
+                    rows="4"
+                    class="input"
+                  ></textarea>
+                </div>
+
+                <div class="btns">
+                  <button type="submit" class="form-btn">Submit</button>
+                  <button type="reset" class="form-btn">Reset</button>
+                </div>
+              </form>
+
+              <span class="bg-1"></span>
+              <span class="bg-2"></span>
             </div>
           </div>
         </div>
@@ -62,7 +125,7 @@ h3 {
 
 .adres-image {
   position: relative;
-  height: 72vh;
+  height: 90vh;
   background-image: url("../assets/img/form-image.jpg");
   background-position: center;
   background-size: cover;
@@ -82,9 +145,11 @@ h3 {
 .box {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  text-align: center;
-  justify-content: space-around;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: stretch;
+  margin: 64px 0;
 }
 .adress-box {
   color: white;
@@ -112,76 +177,101 @@ h3 {
     text-decoration: none;
   }
   .links {
-    margin-top: 65px;
+    margin-top: 30px;
     p {
-      padding: 5px;
+      padding: 2px;
     }
   }
 }
 
 // Contact Form
-.form-box {
-  display: grid;
-  justify-items: center;
-  color: white;
-  margin: 35px 0;
 
-  h3 {
-    font-size: 35px;
-    margin-bottom: 35px;
-  }
-}
+.box-form {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid $green;
 
-form {
-  background-color: hsl(201, 40%, 17%, 0.308);
-  width: 600px;
-  padding: 50px;
-  border-radius: 24px;
-  backdrop-filter: blur(10px);
-
-  label {
-    margin-bottom: 10px;
-    font-size: 20px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    backdrop-filter: blur(10px);
+    background: inherit;
   }
 
-  input,
-  textarea,
-  button {
-    padding: 10px;
-    font-size: 15px;
-    border: 2px solid $green;
-    border-radius: 10px;
+  h1 {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin: 20px;
   }
 
-  textarea {
-    resize: vertical;
-    min-height: 150px;
+  form {
+    position: relative;
+    min-width: 300px;
+    width: 25vw;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  button {
-    padding: 10px;
+  .wrapper {
+    position: relative;
+    width: 50%;
+    min-width: 250px;
+  }
+
+  .input {
     width: 100%;
-    cursor: pointer;
-    color: $green;
-    border-color: $green;
-    background-color: transparent;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-      background-color: transparent;
-      border-color: $green;
-      color: $bright_green;
-      box-shadow: $bright_green;
-      animation: glow 1s ease-in-out infinite alternate;
-      transform: scale(1.02);
-    }
+    border: 1px solid white;
+    outline: none;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 15px 0;
+    color: #425981;
+    font-weight: 500;
+    font-size: 1.1rem;
+    box-shadow: inset 4px 4px 4px #a5a3a350, 4px 4px 4px #dadada21;
   }
 }
 
-.contact-card {
+label {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  pointer-events: none;
+  color: gray;
+}
+
+.btns {
   display: flex;
-  flex-direction: column;
-  margin: 15px 0;
+  gap: 20px;
+}
+
+textarea {
+  max-width: 100%;
+}
+
+.form-btn {
+  width: 120px;
+  height: 50px;
+  background: #fcfcfd;
+  border-radius: 4px;
+  border: 2px solid $green;
+  color: $green;
+
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
 }
 
 /**   media query **/
@@ -189,13 +279,13 @@ form {
 // large
 @media (max-width: 1024px) {
   .adres-image {
-    height: 50vh;
+    height: 60vh;
   }
 }
 
 @media (max-width: 991px) {
   .adres-image {
-    height: 60vh;
+    height: 70vh;
   }
 }
 
@@ -208,26 +298,42 @@ form {
     text-align: center;
   }
   .adres-image {
-    height: 80vh;
+    height: 120vh;
+  }
+
+  .box-form {
+    margin-top: 40px;
   }
 }
 
 // small
 @media (max-width: 414px) {
   .adres-image {
-    height: 90vh;
+    height: 160vh;
   }
 }
 
 @media (max-width: 375px) {
   .adres-image {
-    height: 110vh;
+    height: 160vh;
+  }
+
+  .box-form {
+    form {
+      min-width: 280px;
+    }
   }
 }
 
-@media (max-width: 325px) {
+@media screen and (max-width: 768px) and (max-height: 667px) {
   .adres-image {
-    height: 130vh;
+    height: 180vh;
+  }
+}
+
+@media (max-width: 320px) {
+  .adres-image {
+    height: 230vh;
   }
 }
 
